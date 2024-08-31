@@ -186,6 +186,12 @@
 						</a>
 					</li>
 
+					<li><a href="#" class="ai-icon" aria-expanded="false" hx-post="/stokbibit" hx-target="#konten" hx-replace-url="/stokbibit">
+							<i class="flaticon-user"></i>
+							<span class="nav-text">Stok Bibit</span>
+						</a>
+					</li>
+
 					<li><a href="#" class="ai-icon" aria-expanded="false" hx-post="/awal" hx-target="#konten" hx-replace-url="/awal">
 							<i class="flaticon-blog"></i>
 							<span class="nav-text">
