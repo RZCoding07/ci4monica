@@ -40,18 +40,18 @@
     }
 </style>
 <div class="row">
-    <div class="col-6 mb-4">
-        <div class="rounded" id="chart_lokasi" style="height: 50dvh;width: 100%">
+    <div class="col-12 col-lg-4 mb-4">
+        <div class="rounded" id="chart_lokasi" style="height: 60dvh;width: 100%">
 
         </div>
     </div>
-    <div class="col-6 mb-4">
-        <div class="rounded" id="chart_varietas" style="height: 50dvh;width: 100%">
+    <div class="col-12 col-lg-8 mb-4">
+        <div class="rounded" id="chart_varietas" style="height: 60dvh;width: 100%">
 
         </div>
     </div>
-    <div class="col-6 mb-4">
-        <div class="rounded" id="chart_regional" style="height: 50dvh;width: 100%">
+    <div class="col-12 col-lg-12 mb-4">
+        <div class="rounded" id="chart_regional" style="height: 80dvh;width: 100%">
 
         </div>
     </div>
@@ -85,10 +85,11 @@
 </div>
 
 <script>
+    $('')
     var chartData = new Map();
-    chartData.set('lokasi', JSON.parse('<?php echo json_encode($locs_res) ?>'));
-    chartData.set('varietas', JSON.parse('<?php echo json_encode($vars_res) ?>'));
-    chartData.set('regional', JSON.parse('<?php echo json_encode($reg_res) ?>'));
+    chartData.set('lokasi', JSON.parse('<?php echo json_encode($lokasi) ?>'));
+    chartData.set('varietas', JSON.parse('<?php echo json_encode($varietas) ?>'));
+    chartData.set('regional', JSON.parse('<?php echo json_encode($regional) ?>'));
     var lokasi = []
     chartData.get('lokasi')['keys'].forEach((element, index) => {
         let el = {}
@@ -122,7 +123,7 @@
             align: 'center'
         },
         tooltip: {
-            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            pointFormat: '{point.name}: <b>{point.percentage:.1f}%</b>'
 
         },
         accessibility: {
@@ -136,7 +137,7 @@
                 cursor: 'pointer',
                 dataLabels: {
                     enabled: true,
-                    format: '{point.percentage:.1f} %',
+                    format: '{point.name}: {point.percentage:.1f} %',
                 },
                 showInLegend: true,
                 point: {
@@ -184,7 +185,7 @@
             align: 'center'
         },
         tooltip: {
-            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            pointFormat: '{point.name}: <b>{point.percentage:.1f}%</b>'
 
         },
         accessibility: {
@@ -198,7 +199,7 @@
                 cursor: 'pointer',
                 dataLabels: {
                     enabled: true,
-                    format: '{point.percentage:.1f} %',
+                    format: '{point.name}: {point.percentage:.1f} %',
                 },
                 showInLegend: true,
                 point: {
@@ -247,7 +248,7 @@
             align: 'center'
         },
         tooltip: {
-            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            pointFormat: '{point.name}: <b>{point.percentage:.1f}%</b>'
 
         },
         accessibility: {
@@ -261,7 +262,7 @@
                 cursor: 'pointer',
                 dataLabels: {
                     enabled: true,
-                    format: '{point.percentage:.1f} %',
+                    format: '{point.name}: {point.percentage:.1f} %',
                 },
                 showInLegend: true,
                 point: {

@@ -37,49 +37,36 @@ class StokBibit extends BaseController
         $selector = array_combine(range(1, 30), array_map(function ($i) {
             return $i == 30 ? "nursery_month_$i" . "_plus" : "nursery_month_$i";
         }, range(1, 30)));
-
         $model_raw = db_connect()->table('stok_lokasi_per_var');
         foreach ($selector as $value) {
             $model_raw = $model_raw->selectSum($value);
         }
-
-        $locs = clone $model_raw;
-        $locs = $locs->select('lokasi')->groupBy('lokasi')->getCompiledSelect();
-        $lokasi = db_connect()->table("($locs) st")->groupBy('lokasi')->get()->getResultArray();
-        $locs_res = [];
-        foreach ($lokasi as  $value) {
-            $locs_res['keys'][] = $value['lokasi'];
-            unset($value['lokasi']);
-            $locs_res['data'][] = $value;
-            $v = array_sum(array_values($value));
-            $locs_res['sum'][] = $v;
-        }
-        $vars = clone $model_raw;
-        $vars = $vars->select('varietas')->groupBy('varietas')->getCompiledSelect();
-        $varietas = db_connect()->table("($vars) st")->groupBy('varietas')->get()->getResultArray();
-        $vars_res = [];
-        foreach ($varietas as $value) {
-            $vars_res['keys'][] = $value['varietas'];
-            unset($value['varietas']);
-            $vars_res['data'][] = $value;
-            $v = array_sum(array_values($value));
-            $vars_res['sum'][] = $v;
-        }
+        $loc = clone $model_raw;
+        $var = clone $model_raw;
         $reg = clone $model_raw;
-        $reg = $reg->select('regional')->groupBy('regional')->getCompiledSelect();
-        $regional = db_connect()->table("($reg) st")->groupBy('regional')->get()->getResultArray();
-        $reg_res = [];
-        foreach ($regional as $value) {
-            $reg_res['keys'][] = $value['regional'];
-            unset($value['regional']);
-            $reg_res['data'][] = $value;
-            $v = array_sum(array_values($value));
-            $reg_res['sum'][] = $v;
-        }
+        $lokasi = $this->groupData('lokasi', $loc);
+        $varietas = $this->groupData('varietas', $var);
+        $regional = $this->groupData('regional', $reg);
         $title = 'Dashboard Stok Bibit';
-        $data = compact('locs_res', 'vars_res', 'reg_res', 'title');
+        $data = compact('lokasi', 'varietas', 'regional', 'title');
         $request = service('IncomingRequest');
         return $this->getView($data, $request, 'dashboard/dashboard_bibit');
+    }
+
+    function groupData($param, $model)
+    {
+        $tmp = $model->select($param)->groupBy($param)->getCompiledSelect();
+        $result = db_connect()->table("($tmp) tmp")->groupBy($param)->get()->getResultArray();
+        $returned = [];
+        foreach ($result as $value) {
+            $returned['keys'][] = $value[$param];
+            unset($value[$param]);
+            $returned['data'][] = $value;
+            $v = array_sum(array_values($value));
+            $returned['sum'][] = $v;
+        }
+
+        return $returned;
     }
 
     public function tebel()
