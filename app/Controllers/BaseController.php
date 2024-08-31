@@ -116,9 +116,16 @@ abstract class BaseController extends Controller
         return view('components/title', ['title' => $title]);
     }
 
-    protected function excelDateToPHPDate($excelDate) {
+    protected function excelDateToPHPDate($excelDate)
+    {
         $unixDate = ($excelDate - 25569) * 86400;
         return gmdate("Y-m-d", $unixDate);
     }
-    
+
+    public function jsoner($data)
+    {
+        header('Content-Type: application/json');
+        echo json_encode($data);
+        exit();
+    }
 }

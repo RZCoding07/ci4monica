@@ -38,10 +38,109 @@
 	<link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet" type="text/css" />
 	<!-- Style css -->
 	<link href="<?= base_url() ?>css/style.css" rel="stylesheet">
-
+	<link href="https://cdn.datatables.net/2.1.5/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://unpkg.com/htmx.org@2.0.2"></script>
-
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/modules/export-data.js"></script>
+	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script src="https://cdn.datatables.net/2.1.5/js/dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/2.1.5/js/dataTables.bootstrap5.min.js"></script>
+	<style>
+		body.offcanvas-open {
+			overflow-y: hidden !important;
+		}
+
+		/*Offcanvas Full-Screen*/
+		.offcanvas-full-screen {
+			position: fixed;
+			z-index: 10;
+			transition: -webkit-transform 0.3s ease-in-out;
+			transition: transform 0.3s ease-in-out;
+			transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+			background: transparent;
+			backdrop-filter: blur(10px);
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			-webkit-transform: translateX(100%);
+			-ms-transform: translateX(100%);
+			transform: translateX(100%);
+			overflow-y: auto;
+		}
+
+		.offcanvas-full-screen:has(span.offcanvas-bg-white) {
+			background-color: #fff !important;
+		}
+
+		[data-whatinput="mouse"] .offcanvas-full-screen {
+			outline: 0;
+		}
+
+		.offcanvas-full-screen.is-transition-overlap {
+			z-index: 10;
+		}
+
+		.offcanvas-full-screen.is-transition-overlap.is-open {
+			box-shadow: 0 0 10px rgba(10, 10, 10, 0.7);
+		}
+
+		.offcanvas-full-screen.is-open {
+			-webkit-transform: translate(0, 0);
+			-ms-transform: translate(0, 0);
+			transform: translate(0, 0);
+		}
+
+		.offcanvas-full-screen.is-open~.off-canvas-content {
+			-webkit-transform: translateX(-100%);
+			-ms-transform: translateX(-100%);
+			transform: translateX(-100%);
+		}
+
+		.offcanvas-full-screen.is-transition-push::after {
+			position: absolute;
+			top: 0;
+			right: 0;
+			height: 100%;
+			width: 1px;
+			box-shadow: 0 0 10px rgba(10, 10, 10, 0.7);
+			content: " ";
+		}
+
+		.offcanvas-full-screen.is-transition-overlap.is-open~.off-canvas-content {
+			-webkit-transform: none;
+			-ms-transform: none;
+			transform: none;
+		}
+
+		.offcanvas-full-screen-inner {
+			padding: 1rem;
+			text-align: center;
+		}
+
+		.offcanvas-full-screen-menu {
+			margin: 0;
+			list-style-type: none;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-flex-wrap: nowrap;
+			-ms-flex-wrap: nowrap;
+			flex-wrap: nowrap;
+			-webkit-align-items: center;
+			-ms-flex-align: center;
+			align-items: center;
+			width: 100%;
+			-webkit-flex-wrap: wrap;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+		}
+	</style>
 </head>
 
 <!-- <body oncontextmenu="return false;" oncopy="return false;"> -->
@@ -62,6 +161,26 @@
 				<span data-text="A" class="text-load">A</span>
 
 
+			</div>
+		</div>
+	</div>
+
+	<!-- Offcanvas Full-Screen -->
+	<div id="offcanvas_full_screen" class="offcanvas-full-screen" data-transition="overlap">
+		<div class="offcanvas-full-screen-inner">
+			<div id="offcanvas_header" class="offcanvas-header">
+				<div class="d-flex w-100 justify-content-between">
+					<div id="offcanvas_title" class="offcanvas-title">
+						<h3 class="h4">Offcanvas Title</h3>
+					</div>
+					<div id="offcanvas_close">
+						<button class="btn btn-close fs-4 m-2" onclick="offCanvasClose()" type="button">
+						</button>
+					</div>
+				</div>
+			</div>
+			<div id="offcanvas_body" class="offcanvas-body">
+				Offcanvas Body
 			</div>
 		</div>
 	</div>
@@ -186,9 +305,16 @@
 						</a>
 					</li>
 
-					<li><a href="#" class="ai-icon" aria-expanded="false" hx-post="/stokbibit" hx-target="#konten" hx-replace-url="/stokbibit">
+					<li>
+						<a href="#" class="ai-icon" aria-expanded="false" hx-post="/stokbibit" hx-target="#konten" hx-replace-url="/stokbibit">
 							<i class="flaticon-user"></i>
 							<span class="nav-text">Stok Bibit</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="ai-icon" aria-expanded="false" hx-post="/stokbibit/dashboard_data" hx-target="#konten" hx-replace-url="/stokbibit/dashboard-bibit">
+							<i class="flaticon-user"></i>
+							<span class="nav-text">Dashboard Stok Bibit</span>
 						</a>
 					</li>
 
@@ -310,6 +436,33 @@
 					jQuery('.nav-header .logo-compact, .nav-header .brand-title').attr("src", logo2);
 				});
 			});
+
+			function offCanvasOpen() {
+				$('body').addClass('offcanvas-open');
+				$('#offcanvas_full_screen').addClass('is-open');
+			};
+
+			function offCanvasClose() {
+				$('#offcanvas_full_screen').removeClass('is-open');
+				$('body').removeClass('offcanvas-open');
+				setTimeout(function() {
+					$('#offcanvas_full_screen').find('.offcanvas-body').html('');
+				}, 500)
+			}
+
+			async function offCanvas(title, body, callbackFn = false) {
+				if (typeof title == 'function') {
+					title = await title($('#offcanvas_full_screen .offcanvas-header'));
+				} else {
+					$('#offcanvas_full_screen .offcanvas-header .offcanvas-title').html(title);
+				}
+				$('#offcanvas_full_screen .offcanvas-body').html(body);
+				if (callbackFn) {
+					await callbackFn($('#offcanvas_full_screen .offcanvas-header .offcanvas-title'), $('#offcanvas_full_screen .offcanvas-body'));
+				}
+				offCanvasOpen();
+				return $("#offcanvas_full_screen")
+			};
 		</script>
 
 		<div class="content-body">
