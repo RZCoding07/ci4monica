@@ -28,6 +28,11 @@
         color: white;
     }
 
+    tr.bg-active td {
+        background-color: rgba(143, 255, 103, 0.2);
+        color: black;
+    }
+
     table td {
         color: black;
         vertical-align: middle;
@@ -36,17 +41,17 @@
 </style>
 <div class="row">
     <div class="col-6 mb-4">
-        <div id="chart_lokasi" style="height: 50dvh;width: 100%">
+        <div class="rounded" id="chart_lokasi" style="height: 50dvh;width: 100%">
 
         </div>
     </div>
     <div class="col-6 mb-4">
-        <div id="chart_varietas" style="height: 50dvh;width: 100%">
+        <div class="rounded" id="chart_varietas" style="height: 50dvh;width: 100%">
 
         </div>
     </div>
     <div class="col-6 mb-4">
-        <div id="chart_regional" style="height: 50dvh;width: 100%">
+        <div class="rounded" id="chart_regional" style="height: 50dvh;width: 100%">
 
         </div>
     </div>
@@ -69,38 +74,6 @@
                             <tr class="bg-success">
                                 <td colspan="3" class="text-center">Bulan</td>
                                 <td colspan="27" class="text-center">Bulan</td>
-                            </tr>
-                            <tr class="bg-success">
-                                <td>1</td>
-                                <td>2</td>
-                                <td>3</td>
-                                <td>4</td>
-                                <td>5</td>
-                                <td>6</td>
-                                <td>7</td>
-                                <td>8</td>
-                                <td>9</td>
-                                <td>10</td>
-                                <td>11</td>
-                                <td>12</td>
-                                <td>13</td>
-                                <td>14</td>
-                                <td>15</td>
-                                <td>16</td>
-                                <td>17</td>
-                                <td>18</td>
-                                <td>19</td>
-                                <td>20</td>
-                                <td>21</td>
-                                <td>22</td>
-                                <td>23</td>
-                                <td>24</td>
-                                <td>25</td>
-                                <td>26</td>
-                                <td>27</td>
-                                <td>28</td>
-                                <td>29</td>
-                                <td>&gt;=30</td>
                             </tr>
                         </tbody>
                     </table>
@@ -169,41 +142,7 @@
                 point: {
                     events: {
                         click: function() {
-                            let data = chartData.get('lokasi').data;
-                            let sums = chartData.get('lokasi').sum;
-                            let rowspan = sums.length+1
-                            let j_col = [];
-                            let gt_j_col = 0;
-                            let rows = chartData.get('lokasi').keys.map((e, i) => {
-                                let total_column = sums[i]
-                                let td = Object.values(data[i]).map((e, i) => {
-                                    if (j_col[i] == undefined) {
-                                        j_col[i] = 0
-                                    }
-                                    j_col[i] += Number(e)
-                                    return `<td>${e}</td>`
-                                })
-                                gt_j_col += Number(total_column)
-                                return `<tr><td>${e}</td></td>${td}<td>${total_column.toLocaleString('id-ID')}</td></tr>`
-                            })
-                            j_col.push(gt_j_col)
-                            let j_col_td = j_col.map(e => `<td>${e.toLocaleString('id-ID')}</td>`)
-                            let jumlah = chartData.get('lokasi').sum.map((e, i) => {
-                                return `<td>${e}</td></td>`
-                            })
-                            let body = $('#table_show').html();
-                            offCanvas('<h4 class="text-dark">Rekapitulasi Lokasi Bibitan</h4>', body, false)
-                            let canvas = $("#offcanvas_full_screen")
-                            canvas.find('table tbody').append(`
-                            <tr>
-                                <td rowspan="${rowspan}">Palmco</td>
-                            </tr>
-                            ${rows}
-                            <tr class="bg-success">
-                                <td></td>
-                                <td>Jlh</td>${j_col_td}
-                            </tr>
-                            `)
+                            createTable('lokasi', this.name)
                         }
                     }
                 }
@@ -265,41 +204,7 @@
                 point: {
                     events: {
                         click: function() {
-                            let data = chartData.get('varietas').data;
-                            let sums = chartData.get('varietas').sum;
-                            let rowspan = sums.length+1
-                            let j_col = [];
-                            let gt_j_col = 0;
-                            let rows = chartData.get('varietas').keys.map((e, i) => {
-                                let total_column = sums[i]
-                                let td = Object.values(data[i]).map((e, i) => {
-                                    if (j_col[i] == undefined) {
-                                        j_col[i] = 0
-                                    }
-                                    j_col[i] += Number(e)
-                                    return `<td>${e}</td>`
-                                })
-                                gt_j_col += Number(total_column)
-                                return `<tr><td>${e}</td></td>${td}<td>${total_column.toLocaleString('id-ID')}</td></tr>`
-                            })
-                            j_col.push(gt_j_col)
-                            let j_col_td = j_col.map(e => `<td>${e.toLocaleString('id-ID')}</td>`)
-                            let jumlah = chartData.get('varietas').sum.map((e, i) => {
-                                return `<td>${e}</td></td>`
-                            })
-                            let body = $('#table_show').html();
-                            offCanvas('<h4 class="text-dark">Rekapitulasi Lokasi Bibitan</h4>', body, false)
-                            let canvas = $("#offcanvas_full_screen")
-                            canvas.find('table tbody').append(`
-                            <tr>
-                                <td rowspan="${rowspan}">Palmco</td>
-                            </tr>
-                            ${rows}
-                            <tr class="bg-success">
-                                <td></td>
-                                <td>Jlh</td>${j_col_td}
-                            </tr>
-                            `)
+                            createTable('varietas', this.name)
                         }
                     }
                 }
@@ -362,41 +267,7 @@
                 point: {
                     events: {
                         click: function() {
-                            let data = chartData.get('regional').data;
-                            let sums = chartData.get('regional').sum;
-                            let rowspan = sums.length+1
-                            let j_col = [];
-                            let gt_j_col = 0;
-                            let rows = chartData.get('regional').keys.map((e, i) => {
-                                let total_column = sums[i]
-                                let td = Object.values(data[i]).map((e, i) => {
-                                    if (j_col[i] == undefined) {
-                                        j_col[i] = 0
-                                    }
-                                    j_col[i] += Number(e)
-                                    return `<td>${e}</td>`
-                                })
-                                gt_j_col += Number(total_column)
-                                return `<tr><td>${e}</td></td>${td}<td>${total_column.toLocaleString('id-ID')}</td></tr>`
-                            })
-                            j_col.push(gt_j_col)
-                            let j_col_td = j_col.map(e => `<td>${e.toLocaleString('id-ID')}</td>`)
-                            let jumlah = chartData.get('regional').sum.map((e, i) => {
-                                return `<td>${e}</td></td>`
-                            })
-                            let body = $('#table_show').html();
-                            offCanvas('<h4 class="text-dark">Rekapitulasi Lokasi Bibitan</h4>', body, false)
-                            let canvas = $("#offcanvas_full_screen")
-                            canvas.find('table tbody').append(`
-                            <tr>
-                                <td rowspan="${rowspan}">Palmco</td>
-                            </tr>
-                            ${rows}
-                            <tr class="bg-success">
-                                <td></td>
-                                <td>Jlh</td>${j_col_td}
-                            </tr>
-                            `)
+                            createTable('regional', this.name)
                         }
                     }
                 }
@@ -408,4 +279,50 @@
             data: regional
         }]
     });
+
+    function createTable(key, name) {
+        let data = chartData.get(key).data;
+        let keys = chartData.get(key).keys
+        let sums = chartData.get(key).sum;
+        let rowspan = sums.length + 1
+        let j_col = [];
+        let gt_j_col = 0;
+        let rows = keys.map((e, i) => {
+            let total_column = sums[i]
+            let td = Object.values(data[i]).map((e, i) => {
+                if (j_col[i] == undefined) {
+                    j_col[i] = 0
+                }
+                j_col[i] += Number(e)
+                return `<td>${e}</td>`
+            })
+            gt_j_col += Number(total_column)
+            return `<tr ${name==e? 'class="bg-active"':''}><td>${e}</td></td>${td}<td>${total_column.toLocaleString('id-ID')}</td></tr>`
+        })
+        j_col.push(gt_j_col)
+        let j_col_td = j_col.map(e => `<td>${e.toLocaleString('id-ID')}</td>`)
+        let jumlah = sums.map((e, i) => {
+            return `<td>${e}</td></td>`
+        })
+        let body = $('#table_show').html();
+        offCanvas('<h4 class="text-dark">Rekapitulasi Lokasi Bibitan</h4>', body, false)
+        let canvas = $("#offcanvas_full_screen")
+        let bulan = '';
+        for (let i = 1; i <= 30; i++) {
+            bulan += i == 30 ? `<td>>=${i}</td>` : `<td>${i}</td>`
+        }
+        canvas.find('table tbody').append(`
+                            <tr class="bg-success">
+                            ${bulan}
+                            </tr>
+                            <tr>
+                                <td rowspan="${rowspan}">Palmco</td>
+                            </tr>
+                            ${rows}
+                            <tr class="bg-success">
+                                <td></td>
+                                <td>Jlh</td>${j_col_td}
+                            </tr>
+                            `)
+    };
 </script>
