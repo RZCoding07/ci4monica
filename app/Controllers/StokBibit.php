@@ -65,8 +65,19 @@ class StokBibit extends BaseController
             $v = array_sum(array_values($value));
             $vars_res['sum'][] = $v;
         }
+        $reg = clone $model_raw;
+        $reg = $reg->select('regional')->groupBy('regional')->getCompiledSelect();
+        $regional = db_connect()->table("($reg) st")->groupBy('regional')->get()->getResultArray();
+        $reg_res = [];
+        foreach ($regional as $value) {
+            $reg_res['keys'][] = $value['regional'];
+            unset($value['regional']);
+            $reg_res['data'][] = $value;
+            $v = array_sum(array_values($value));
+            $reg_res['sum'][] = $v;
+        }
         $title = 'Dashboard Stok Bibit';
-        $data = compact('vars_res', 'locs_res', 'title');
+        $data = compact('locs_res', 'vars_res', 'reg_res', 'title');
         $request = service('IncomingRequest');
         return $this->getView($data, $request, 'dashboard/dashboard_bibit');
     }

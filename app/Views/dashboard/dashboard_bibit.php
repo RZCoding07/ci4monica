@@ -35,17 +35,21 @@
     }
 </style>
 <div class="row">
-    <div class="col-6">
+    <div class="col-6 mb-4">
         <div id="chart_lokasi" style="height: 50dvh;width: 100%">
 
         </div>
     </div>
-    <div class="col-6">
+    <div class="col-6 mb-4">
         <div id="chart_varietas" style="height: 50dvh;width: 100%">
 
         </div>
     </div>
-    <div class="col-6"></div>
+    <div class="col-6 mb-4">
+        <div id="chart_regional" style="height: 50dvh;width: 100%">
+
+        </div>
+    </div>
 </div>
 
 <div id="table_show" class="d-none">
@@ -111,6 +115,7 @@
     var chartData = new Map();
     chartData.set('lokasi', JSON.parse('<?php echo json_encode($locs_res) ?>'));
     chartData.set('varietas', JSON.parse('<?php echo json_encode($vars_res) ?>'));
+    chartData.set('regional', JSON.parse('<?php echo json_encode($reg_res) ?>'));
     var lokasi = []
     chartData.get('lokasi')['keys'].forEach((element, index) => {
         let el = {}
@@ -131,24 +136,7 @@
         }
         lokasi.push(el)
     })
-    var varietas = []
-    chartData.get('varietas')['keys'].forEach((element, index) => {
-        let el = {}
-        if (index == 0) {
-            el = {
-                name: element,
-                y: chartData.get('varietas')['sum'][index],
-                sliced: true,
-                selected: true,
-            }
-        } else {
-            el = {
-                name: element,
-                y: chartData.get('varietas')['sum'][index]
-            }
-        }
-        varietas.push(el)
-    })
+
     var chart_lokasi = Highcharts.chart('chart_lokasi', {
         chart: {
             plotBackgroundColor: null,
@@ -183,6 +171,7 @@
                         click: function() {
                             let data = chartData.get('lokasi').data;
                             let sums = chartData.get('lokasi').sum;
+                            let rowspan = sums.length+1
                             let j_col = [];
                             let gt_j_col = 0;
                             let rows = chartData.get('lokasi').keys.map((e, i) => {
@@ -207,7 +196,7 @@
                             let canvas = $("#offcanvas_full_screen")
                             canvas.find('table tbody').append(`
                             <tr>
-                                <td rowspan="3">Palmco</td>
+                                <td rowspan="${rowspan}">Palmco</td>
                             </tr>
                             ${rows}
                             <tr class="bg-success">
@@ -226,6 +215,24 @@
             data: lokasi
         }]
     });
+    var varietas = []
+    chartData.get('varietas')['keys'].forEach((element, index) => {
+        let el = {}
+        if (index == 0) {
+            el = {
+                name: element,
+                y: chartData.get('varietas')['sum'][index],
+                sliced: true,
+                selected: true,
+            }
+        } else {
+            el = {
+                name: element,
+                y: chartData.get('varietas')['sum'][index]
+            }
+        }
+        varietas.push(el)
+    })
     var chart_varietas = Highcharts.chart('chart_varietas', {
         chart: {
             plotBackgroundColor: null,
@@ -260,6 +267,7 @@
                         click: function() {
                             let data = chartData.get('varietas').data;
                             let sums = chartData.get('varietas').sum;
+                            let rowspan = sums.length+1
                             let j_col = [];
                             let gt_j_col = 0;
                             let rows = chartData.get('varietas').keys.map((e, i) => {
@@ -284,7 +292,7 @@
                             let canvas = $("#offcanvas_full_screen")
                             canvas.find('table tbody').append(`
                             <tr>
-                                <td rowspan="9">Palmco</td>
+                                <td rowspan="${rowspan}">Palmco</td>
                             </tr>
                             ${rows}
                             <tr class="bg-success">
@@ -301,6 +309,103 @@
             name: 'Persentase',
             colorByPoint: true,
             data: varietas
+        }]
+    });
+
+    var regional = []
+    chartData.get('regional')['keys'].forEach((element, index) => {
+        let el = {}
+        if (index == 0) {
+            el = {
+                name: element,
+                y: chartData.get('regional')['sum'][index],
+                sliced: true,
+                selected: true,
+            }
+        } else {
+            el = {
+                name: element,
+                y: chartData.get('regional')['sum'][index]
+            }
+        }
+        regional.push(el)
+    })
+    var chart_regional = Highcharts.chart('chart_regional', {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: 'Stock Bibit Regional',
+            align: 'center'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+
+        },
+        accessibility: {
+            point: {
+                valueSuffix: '%'
+            }
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.percentage:.1f} %',
+                },
+                showInLegend: true,
+                point: {
+                    events: {
+                        click: function() {
+                            let data = chartData.get('regional').data;
+                            let sums = chartData.get('regional').sum;
+                            let rowspan = sums.length+1
+                            let j_col = [];
+                            let gt_j_col = 0;
+                            let rows = chartData.get('regional').keys.map((e, i) => {
+                                let total_column = sums[i]
+                                let td = Object.values(data[i]).map((e, i) => {
+                                    if (j_col[i] == undefined) {
+                                        j_col[i] = 0
+                                    }
+                                    j_col[i] += Number(e)
+                                    return `<td>${e}</td>`
+                                })
+                                gt_j_col += Number(total_column)
+                                return `<tr><td>${e}</td></td>${td}<td>${total_column.toLocaleString('id-ID')}</td></tr>`
+                            })
+                            j_col.push(gt_j_col)
+                            let j_col_td = j_col.map(e => `<td>${e.toLocaleString('id-ID')}</td>`)
+                            let jumlah = chartData.get('regional').sum.map((e, i) => {
+                                return `<td>${e}</td></td>`
+                            })
+                            let body = $('#table_show').html();
+                            offCanvas('<h4 class="text-dark">Rekapitulasi Lokasi Bibitan</h4>', body, false)
+                            let canvas = $("#offcanvas_full_screen")
+                            canvas.find('table tbody').append(`
+                            <tr>
+                                <td rowspan="${rowspan}">Palmco</td>
+                            </tr>
+                            ${rows}
+                            <tr class="bg-success">
+                                <td></td>
+                                <td>Jlh</td>${j_col_td}
+                            </tr>
+                            `)
+                        }
+                    }
+                }
+            },
+        },
+        series: [{
+            name: 'Persentase',
+            colorByPoint: true,
+            data: regional
         }]
     });
 </script>
