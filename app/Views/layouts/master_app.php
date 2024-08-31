@@ -312,7 +312,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="#" class="ai-icon" aria-expanded="false" hx-post="/stokbibit/dashboard_data" hx-target="#konten" hx-replace-url="/stokbibit/dashboard-bibit">
+						<a href="#" class="ai-icon" aria-expanded="false" hx-post="/stokbibit/dashboard_data" hx-target="#konten" hx-replace-url="/stokbibit/">
 							<i class="flaticon-user"></i>
 							<span class="nav-text">Dashboard Stok Bibit</span>
 						</a>
@@ -450,15 +450,15 @@
 				}, 500)
 			}
 
-			async function offCanvas(title, body, callbackFn = false) {
+			function offCanvas(title, body, callbackFn = false) {
 				if (typeof title == 'function') {
-					title = await title($('#offcanvas_full_screen .offcanvas-header'));
+					title = title($('#offcanvas_full_screen .offcanvas-header'));
 				} else {
 					$('#offcanvas_full_screen .offcanvas-header .offcanvas-title').html(title);
 				}
 				$('#offcanvas_full_screen .offcanvas-body').html(body);
 				if (callbackFn) {
-					await callbackFn($('#offcanvas_full_screen .offcanvas-header .offcanvas-title'), $('#offcanvas_full_screen .offcanvas-body'));
+					callbackFn($('#offcanvas_full_screen .offcanvas-header .offcanvas-title'), $('#offcanvas_full_screen .offcanvas-body'));
 				}
 				offCanvasOpen();
 				return $("#offcanvas_full_screen")
