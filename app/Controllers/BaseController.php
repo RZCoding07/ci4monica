@@ -107,7 +107,7 @@ abstract class BaseController extends Controller
 
     protected function getView($data, HtmxRequest $request, $page = 'components/table')
     {
-        $data['title_web'] = $this->title($data['title']);
+        $data['title_web'] = $this->title($data['title']) ?? '';
         return view($request->isHtmx() ? $page : 'layouts/master_app', ['content' => view($page, $data)]);
     }
 

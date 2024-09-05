@@ -37,44 +37,36 @@ class StokBibit extends BaseController
         $selector = array_combine(range(1, 30), array_map(function ($i) {
             return $i == 30 ? "nursery_month_$i" . "_plus" : "nursery_month_$i";
         }, range(1, 30)));
-
-        $model = db_connect()->table('stok_lokasi_per_var');
-        foreach ($selector as $key => $value) {
-            $model = $model->selectSum($value);
+        $model_raw = db_connect()->table('stok_lokasi_per_var');
+        foreach ($selector as $value) {
+            $model_raw = $model_raw->selectSum($value);
         }
-        $model = $model->select('GROUP_CONCAT(id SEPARATOR ",") as list_of_ids')
-            ->select('lokasi')
-            ->groupBy('lokasi')
-            ->getCompiledSelect();
-        $md = db_connect()->table("($model) st");
-        $mc = clone $md;
-        $mx = clone $md;
-        $pc = clone $md;
-        $px = clone $md;
-        $mn['attr'] = $mc->where('st.lokasi', 'MN')
-            ->select('list_of_ids,lokasi')
-            ->get()
-            ->getResult();
-        $mn['data'] = $mx->where('st.lokasi', 'MN')
-            ->select($selector)
-            ->get()
-            ->getResultArray();
-        $mn['sum'] = array_map(function ($row) {
-            return array_sum($row);
-        }, $mn['data']);
+        $loc = clone $model_raw;
+        $var = clone $model_raw;
+        $reg = clone $model_raw;
+        $lokasi = $this->groupData('lokasi', $loc);
+        $varietas = $this->groupData('varietas', $var);
+        $regional = $this->groupData('regional', $reg);
+        $title = 'Dashboard Stok Bibit';
+        $data = compact('lokasi', 'varietas', 'regional', 'title');
+        $request = service('IncomingRequest');
+        return $this->getView($data, $request, 'dashboard/dashboard_bibit');
+    }
 
-        $pn['attr'] = $pc->where('st.lokasi', 'PN')
-            ->select('list_of_ids,lokasi')
-            ->get()
-            ->getResult();
-        $pn['data'] = $px->where('st.lokasi', 'PN')
-            ->select($selector)
-            ->get()
-            ->getResultArray();
-        $pn['sum'] = array_map(function ($row) {
-            return array_sum($row);
-        }, $pn['data']);
-        return view('dashboard/dashboard_bibit', ['mn' => $mn, 'pn' => $pn]);
+    function groupData($param, $model)
+    {
+        $tmp = $model->select($param)->groupBy($param)->getCompiledSelect();
+        $result = db_connect()->table("($tmp) tmp")->groupBy($param)->get()->getResultArray();
+        $returned = [];
+        foreach ($result as $value) {
+            $returned['keys'][] = $value[$param];
+            unset($value[$param]);
+            $returned['data'][] = $value;
+            $v = array_sum(array_values($value));
+            $returned['sum'][] = $v;
+        }
+
+        return $returned;
     }
 
     public function tebel()
