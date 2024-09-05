@@ -44,11 +44,52 @@ class StokBibit extends BaseController
         $loc = clone $model_raw;
         $var = clone $model_raw;
         $reg = clone $model_raw;
+        $tbl = clone $model_raw;
         $lokasi = $this->groupData('lokasi', $loc);
         $varietas = $this->groupData('varietas', $var);
         $regional = $this->groupData('regional', $reg);
+
+        $selector = array_merge($selector, ['lokasi', 'regional']);
+        $tbl = db_connect()
+            ->table('stok_lokasi_per_var')
+            ->select($selector)
+            ->getCompiledSelect();
+        $result_pn = db_connect()
+            ->table("($tbl) tbl")
+            ->where('lokasi', 'PN')
+            ->select($selector)
+            ->orderBy('regional', "ASC")->getCompiledSelect();
+        $result_mn = db_connect()
+            ->table("($tbl) tbl")
+            ->where('lokasi', 'MN')
+            ->select($selector)
+            ->orderBy('regional', "ASC")->getCompiledSelect();
+        array_pop($selector);
+        array_pop($selector);
+        $_pn = db_connect()->table("($result_pn) pn");
+        $_mn = db_connect()->table("($result_mn) mn");
+        $result_pn = $_pn->get()->getResultArray();
+        $result_mn = $_mn->get()->getResultArray();
+        $tbl = [];
+        foreach ($result_pn as $key => $vpn) {
+            $vmn = $result_mn[$key];
+            $reg = $vpn['regional'];
+            array_pop($vpn);
+            array_pop($vpn);
+            array_pop($vmn);
+            array_pop($vmn);
+            if (!isset($tbl['tbl'][$reg]['PN'])) {
+                $tbl['tbl'][$reg]['PN'] = 0;
+            }
+            if (!isset($tbl['tbl'][$reg]['MN'])) {
+                $tbl['tbl'][$reg]['MN'] = 0;
+            }
+            $tbl['tbl'][$reg]['PN'] += array_sum(array_values($vpn));
+            $tbl['tbl'][$reg]['MN'] += array_sum(array_values($vmn));
+        }
+        $tbl['tbl_keys'] = array_keys($tbl['tbl']);
         $title = 'Dashboard Stok Bibit';
-        $data = compact('lokasi', 'varietas', 'regional', 'title');
+        $data = compact('lokasi', 'varietas', 'regional', 'tbl', 'title');
         $request = service('IncomingRequest');
         return $this->getView($data, $request, 'dashboard/dashboard_bibit');
     }

@@ -201,7 +201,7 @@
 			</div>
 		</div>
 
-		<div class="header border-bottom">
+		<div class="header border-bottom position-fixed">
 			<div class="header-content">
 				<nav class="navbar navbar-expand">
 					<div class="collapse navbar-collapse justify-content-between">
@@ -274,7 +274,7 @@
             Sidebar start
         ***********************************-->
 		<div class="ic-sidenav">
-			<div class="ic-sidenav-scroll">
+			<div class="ic-sidenav-scroll position-fixed">
 				<ul class="metismenu" id="menu">
 					<li class="menu-title border-top-0 pt-2">Main Menu</li>
 					<li><a href="#" class="ai-icon" aria-expanded="false" hx-get="<?= session()->get('monica_type') ?>/dashboard" hx-target="#konten" hx-replace-url="<?= session()->get('monica_type') ?>/dashboard">
