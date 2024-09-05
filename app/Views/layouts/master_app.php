@@ -8,18 +8,7 @@
 	<meta name="author" content="indiancoder">
 	<meta name="robots" content="index, follow">
 
-	<meta name="keywords" content="	admin, admin dashboard, admin template, analytics, bootstrap, bootstrap5, bootstrap 5 admin template, modern, responsive admin dashboard, sales dashboard, sass, ui kit, web app, Codebyte SaaS, User Interface (UI), User Experience (UX), Dashboard Design, SaaS Application, Web Application, Data Visualization, Analytics, Customization, Responsive Design, Bootstrap Framework, Charts and Graphs, Data Management, Reporting, Dark Mode, Mobile-Friendly, Dashboard Components, Integrations, Analytics Dashboard, API Integration, User Authentication">
-	<meta name="description" content="Elevate your administrative efficiency and enhance productivity with the Codebyte SaaS Admin Dashboard Template. Designed to streamline your tasks, this powerful tool provides a user-friendly interface, robust features, and customizable options, making it the ideal choice for managing your data and operations with ease.">
 
-	<meta property="og:title" content="Codebyte : Codebyte Saas Admin Bootstrap 5 Template | Indiancoder">
-	<meta property="og:description" content="Elevate your administrative efficiency and enhance productivity with the Codebyte SaaS Admin Dashboard Template. Designed to streamline your tasks, this powerful tool provides a user-friendly interface, robust features, and customizable options, making it the ideal choice for managing your data and operations with ease.">
-	<meta property="og:image" content="https://codebyte.indiancoder.com/xhtml/social-image.png">
-	<meta name="format-detection" content="telephone=no">
-
-	<meta name="twitter:title" content="Codebyte : Codebyte Saas Admin Bootstrap 5 Template | Indiancoder">
-	<meta name="twitter:description" content="Elevate your administrative efficiency and enhance productivity with the Codebyte SaaS Admin Dashboard Template. Designed to streamline your tasks, this powerful tool provides a user-friendly interface, robust features, and customizable options, making it the ideal choice for managing your data and operations with ease.">
-	<meta name="twitter:image" content="https://codebyte.indiancoder.com/xhtml/social-image.png">
-	<meta name="twitter:card" content="summary_large_image">
 
 	<!-- MOBILE SPECIFIC -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -147,6 +136,8 @@
 
 <body>
 
+	<?= view('components/loading') ?>
+
 	<!--*******************
         Preloader start
     ********************-->
@@ -273,124 +264,7 @@
 		<!--**********************************
             Sidebar start
         ***********************************-->
-		<div class="ic-sidenav">
-			<div class="ic-sidenav-scroll">
-				<ul class="metismenu" id="menu">
-					<li class="menu-title border-top-0 pt-2">Main Menu</li>
-					<li><a href="#" class="ai-icon" aria-expanded="false" hx-get="<?= session()->get('monica_type') ?>/dashboard" hx-target="#konten" hx-replace-url="<?= session()->get('monica_type') ?>/dashboard">
-							<i class="flaticon-home"></i>
-							<span class="nav-text">Dashboard</span>
-						</a>
-					</li>
-
-					<li><a href="#" class="ai-icon" aria-expanded="false" hx-post="/users" hx-target="#konten" hx-replace-url="/users">
-							<i class="flaticon-user"></i>
-							<span class="nav-text">Users</span>
-						</a>
-					</li>
-					<li><a href="#" class="ai-icon" aria-expanded="false" hx-post="/pks" hx-target="#konten" hx-replace-url="/pks">
-							<i class="flaticon-user"></i>
-							<span class="nav-text">PKS</span>
-						</a>
-					</li>
-					<li><a href="#" class="ai-icon" aria-expanded="false" hx-post="/kebun" hx-target="#konten" hx-replace-url="/kebun">
-							<i class="flaticon-user"></i>
-							<span class="nav-text">Kebun</span>
-						</a>
-					</li>
-
-					<li><a href="#" class="ai-icon" aria-expanded="false" hx-post="/regional" hx-target="#konten" hx-replace-url="/regional">
-							<i class="flaticon-user"></i>
-							<span class="nav-text">Regional</span>
-						</a>
-					</li>
-
-					<li>
-						<a href="#" class="ai-icon" aria-expanded="false" hx-post="/stokbibit" hx-target="#konten" hx-replace-url="/stokbibit">
-							<i class="flaticon-user"></i>
-							<span class="nav-text">Stok Bibit</span>
-						</a>
-					</li>
-					<li>
-						<a href="#" class="ai-icon" aria-expanded="false" hx-post="/stokbibit/dashboard_data" hx-target="#konten" hx-replace-url="/stokbibit/">
-							<i class="flaticon-user"></i>
-							<span class="nav-text">Dashboard Stok Bibit</span>
-						</a>
-					</li>
-
-					<li><a href="#" class="ai-icon" aria-expanded="false" hx-post="/awal" hx-target="#konten" hx-replace-url="/awal">
-							<i class="flaticon-blog"></i>
-							<span class="nav-text">
-								Investasi Awal
-							</span>
-						</a>
-					</li>
-					<li><a href="#" class="ai-icon" aria-expanded="false" hx-post="/sumberips" hx-target="#konten" hx-replace-url="/sumberips">
-							<i class="flaticon-blog"></i>
-							<span class="nav-text">
-								Sumber Ips
-							</span>
-						</a>
-					</li>
-
-					<li><a href="#" class="ai-icon" aria-expanded="false" hx-post="/progresslapangan" hx-target="#konten" hx-replace-url="/progresslapangan">
-							<i class="flaticon-blog"></i>
-							<span class="nav-text">
-
-
-								Progress Lap. Investasi
-
-							</span>
-						</a>
-					</li>
-
-
-					<li><a href="<?= base_url('a') ?>" class="ai-icon" aria-expanded="false">
-							<i class="flaticon-blog"></i>
-							<span class="nav-text">
-								Pengawasan Pekerjaan Lapangan
-							</span>
-						</a>
-					</li>
-
-
-					<li><a href="<?= base_url('a') ?>" class="ai-icon" aria-expanded="false">
-							<i class="flaticon-blog"></i>
-							<span class="nav-text">
-								Input Uraian Pekerjaan
-							</span>
-						</a>
-					</li>
-
-
-					<li><a href="<?= base_url('a') ?>" class="ai-icon" aria-expanded="false">
-							<i class="flaticon-blog"></i>
-							<span class="nav-text">
-								Update Progress
-							</span>
-						</a>
-					</li>
-
-
-					<li><a href="<?= base_url('a') ?>" class="ai-icon" aria-expanded="false">
-							<i class="flaticon-blog"></i>
-							<span class="nav-text">
-								Upload Dokumen
-							</span>
-						</a>
-					</li>
-
-					<li><a href="#" class="ai-icon" aria-expanded="false" hx-get="/dashboard" hx-target="#konten">
-							<i class="flaticon-blog"></i>
-							<span class="nav-text">
-								Reset Password
-							</span>
-						</a>
-					</li>
-
-			</div>
-		</div>
-
+		<?= view('components/sidebar') ?>
 		<script src="<?= base_url() ?>vendor/global/global.min.js"></script>
 		<script src="<?= base_url() ?>vendor/datatables/js/jquery.dataTables.min.js"></script>
 		<script src="<?= base_url() ?>vendor/datatables/js/dataTables.buttons.min.js"></script>
@@ -463,12 +337,21 @@
 				offCanvasOpen();
 				return $("#offcanvas_full_screen")
 			};
+
+			function showLoading(b) {
+				if (b) {
+					$('#loading-keren').show();
+				} else {
+					$('#loading-keren').hide();
+				}
+			}
 		</script>
 
 		<div class="content-body">
 			<!-- row -->
 			<div class="container-fluid" id="konten">
 				<?= $content ?? null ?>
+
 			</div>
 		</div>
 		<!--**********************************
