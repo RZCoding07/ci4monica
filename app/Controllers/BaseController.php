@@ -122,7 +122,7 @@ abstract class BaseController extends Controller
         return gmdate("Y-m-d", $unixDate);
     }
 
-    public function jsoner($data)
+    public function  jsoner($data)
     {
         header('Content-Type: application/json');
         echo json_encode($data);
