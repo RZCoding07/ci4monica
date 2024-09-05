@@ -11,15 +11,15 @@
         font-family: 'Times New Roman', Times, serif;
     }
 
-    table tr:nth-child(4) td {
+    #offcanvas_full_screen table tr:nth-child(4) td {
         text-align: right;
     }
 
-    table tr:nth-child(5) td {
+    #offcanvas_full_screen table tr:nth-child(5) td {
         text-align: right;
     }
 
-    table tr:nth-child(6) td {
+    #offcanvas_full_screen table tr:nth-child(6) td {
         text-align: right;
     }
 
@@ -39,20 +39,105 @@
         text-align: center;
     }
 </style>
-<div class="row">
+<div class="row flex-fill">
     <div class="col-12 col-lg-4 mb-4">
-        <div class="rounded" id="chart_lokasi" style="height: 60dvh;width: 100%">
+        <div class="h-100" id="chart_lokasi" style="height: 60dvh;width: 100%">
 
         </div>
     </div>
     <div class="col-12 col-lg-8 mb-4">
-        <div class="rounded" id="chart_varietas" style="height: 60dvh;width: 100%">
+        <div class="h-100" id="chart_varietas" style="height: 60dvh;width: 100%">
 
         </div>
     </div>
-    <div class="col-12 col-lg-12 mb-4">
-        <div class="rounded" id="chart_regional" style="height: 80dvh;width: 100%">
+    <div class="col-12 col-lg-6 mb-4">
+        <div class="h-100" id="chart_regional" style="height: 80dvh;width: 100%">
 
+        </div>
+    </div>
+    <?php extract($tbl) ?>
+    <div class="col-12 col-lg-6 mb-4">
+        <div class="table-responsive h-100" style="width: 100%">
+            <table class="table table-bordered h-100">
+                <tbody>
+                    <tr class="bg-success">
+                        <td rowspan="2" class="text-center">Sub</td>
+                        <td rowspan="2" class="text-center">Regional</td>
+                        <td colspan="2" class="text-center">Stock Bibit</td>
+                    </tr>
+                    <tr class="bg-success">
+                        <td class="text-center">PN</td>
+                        <td class="text-center">MN</td>
+                    </tr>
+                    <?php
+                    $mnt = 0;
+                    $pnt = 0;
+                    $first = true;
+                    foreach ($tbl_keys as $key => $v): ?>
+                        <tr>
+                            <?php if ($first) {
+                                $first = false;
+                                echo ' <td rowspan="9">Palmco</td>';
+                            } ?>
+                            <td class="text-center"><?= $v ?></td>
+                            <td class="text-end"><?php $pnt += $tbl[$v]['PN'];
+                                echo $tbl[$v]['PN'] ?></td>
+                            <td class="text-end"><?php $mnt += $tbl[$v]['MN'];
+                                echo $tbl[$v]['MN'] ?></td>
+                        </tr
+                            <?php endforeach; ?>>
+                        <!-- <tr>
+                            <td class="text-center">II</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">III</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">IV</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">V</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>VI</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>VII</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>KSO Eks N2</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>KSO Eks N14</td>
+                            <td></td>
+                            <td></td>
+                        </tr> -->
+                        <tr class="bg-success">
+                            <td colspan="2" rowspan="2">Palmco</td>
+                            <td class="text-end"><?= $pnt ?></td>
+                            <td class="text-end"><?= $mnt ?></td>
+                        </tr>
+                        <tr class="bg-success">
+                            <td class="text-end" colspan="2">
+                                <?= $pnt + $mnt ?>
+                            </td>
+                        </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
@@ -85,7 +170,6 @@
 </div>
 
 <script>
-    $('')
     var chartData = new Map();
     chartData.set('lokasi', JSON.parse('<?php echo json_encode($lokasi) ?>'));
     chartData.set('varietas', JSON.parse('<?php echo json_encode($varietas) ?>'));
@@ -99,13 +183,13 @@
                 y: chartData.get('lokasi')['sum'][index],
                 sliced: true,
                 selected: true,
-                color: 'rgb(108, 168, 68)',
+                // color: 'rgb(108, 168, 68)',
             }
         } else {
             el = {
                 name: element,
                 y: chartData.get('lokasi')['sum'][index],
-                color: 'rgb(84, 130, 53)'
+                // color: 'rgb(84, 130, 53)'
             }
         }
         lokasi.push(el)
@@ -123,7 +207,7 @@
             align: 'center'
         },
         tooltip: {
-            pointFormat: '{point.name}: <b>{point.percentage:.1f}%</b>'
+            pointFormat: '{point.name}: <b>{point.y}</b>'
 
         },
         accessibility: {
@@ -133,6 +217,7 @@
         },
         plotOptions: {
             pie: {
+                innerSize: '50%',
                 allowPointSelect: true,
                 cursor: 'pointer',
                 dataLabels: {
@@ -185,7 +270,7 @@
             align: 'center'
         },
         tooltip: {
-            pointFormat: '{point.name}: <b>{point.percentage:.1f}%</b>'
+            pointFormat: '{point.name}: <b>{point.y}</b>'
 
         },
         accessibility: {
@@ -195,6 +280,7 @@
         },
         plotOptions: {
             pie: {
+                innerSize: '50%',
                 allowPointSelect: true,
                 cursor: 'pointer',
                 dataLabels: {
@@ -248,7 +334,7 @@
             align: 'center'
         },
         tooltip: {
-            pointFormat: '{point.name}: <b>{point.percentage:.1f}%</b>'
+            pointFormat: '{point.name}: <b>{point.y}</b>'
 
         },
         accessibility: {
@@ -258,6 +344,7 @@
         },
         plotOptions: {
             pie: {
+                innerSize: '50%',
                 allowPointSelect: true,
                 cursor: 'pointer',
                 dataLabels: {
