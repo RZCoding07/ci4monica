@@ -17,8 +17,7 @@ class Dashboard extends BaseController
             'p_tekpol' => (new SumberIpsModel())->where('nomor_pk !=',  "")->countAll(),
             'p_hps' => (new SumberIpsModel())->where('tgl_create_pk !=', "")->countAll(),
             'p_pengadaan' => (new SumberIpsModel())->where('tgl_submit_ke_pengadaan !=', "")->countAll(),
-            'p_pengadaan' => (new SumberIpsModel())->where('tgl_submit_ke_pengadaan !=', "")->countAll(),
-
+            'p_pengadaan' => (new SumberIpsModel())->where('tgl_submit_ke_pengadaan !=', "")->countAll()
         ];
         return $this->getView($data, $request, 'dashboard');
     }

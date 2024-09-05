@@ -66,6 +66,7 @@ abstract class BaseController extends Controller
             'processing' => true,
             'serverSide' => true,
             'responsive' => false,
+            'async' => true,
             'ajax' => $config['url'],
             'dom' => $config['dom'] ?? 'Bfrtip',
             'buttons' => $this->getDataTableButtons(),

@@ -7,9 +7,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="author" content="indiancoder">
 	<meta name="robots" content="index, follow">
-
-
-
 	<!-- MOBILE SPECIFIC -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -35,8 +32,6 @@
 	<script src="https://code.highcharts.com/modules/export-data.js"></script>
 	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-	<script src="https://cdn.datatables.net/2.1.5/js/dataTables.min.js"></script>
-	<script src="https://cdn.datatables.net/2.1.5/js/dataTables.bootstrap5.min.js"></script>
 	<style>
 		body.offcanvas-open {
 			overflow-y: hidden !important;
@@ -128,6 +123,16 @@
 			-webkit-flex-wrap: wrap;
 			-ms-flex-wrap: wrap;
 			flex-wrap: wrap;
+		}
+
+
+		#particles-js {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: 50% 50%;
 		}
 	</style>
 </head>
@@ -242,7 +247,7 @@
 										</svg>
 										<span class="ms-2">Inbox </span>
 									</a>
-									<a href="page-login.html" class="dropdown-item ai-icon">
+									<a href="<?= base_url('logout') ?>" class="dropdown-item ai-icon">
 										<svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 											<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
 											<polyline points="16 17 21 12 16 7"></polyline>
@@ -266,6 +271,8 @@
         ***********************************-->
 		<?= view('components/sidebar') ?>
 		<script src="<?= base_url() ?>vendor/global/global.min.js"></script>
+		<script src="<?= base_url() ?>vendor/particles/particles.js"></script>
+		<script src="<?= base_url() ?>vendor/particles/particles-app.js"></script>
 		<script src="<?= base_url() ?>vendor/datatables/js/jquery.dataTables.min.js"></script>
 		<script src="<?= base_url() ?>vendor/datatables/js/dataTables.buttons.min.js"></script>
 		<script src="<?= base_url() ?>vendor/datatables/js/buttons.html5.min.js"></script>
@@ -279,6 +286,7 @@
 		<script src="<?= base_url() ?>js/ic-sidenav-init.js"></script>
 		<script src="<?= base_url() ?>js/demo.js"></script>
 		<script src="<?= base_url() ?>js/styleSwitcher.js"></script>
+
 		<script>
 			$(document).ready(function() {
 				//change dark mode
@@ -348,6 +356,8 @@
 		</script>
 
 		<div class="content-body">
+			<div id="particles-js"></div>
+
 			<!-- row -->
 			<div class="container-fluid" id="konten">
 				<?= $content ?? null ?>
@@ -359,40 +369,7 @@
         ***********************************-->
 
 		<!-- Modal -->
-		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h1 class="modal-title fs-5" id="exampleModalLabel">Project title</h1>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<form>
-							<div class="row">
-								<div class="col-xl-12">
-									<div class="mb-3">
-										<label for="exampleFormControlInput1" class="form-label">Project Id</label>
-										<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="#P-000441425">
-									</div>
-								</div>
-								<div class="col-xl-12">
-									<div class="mb-3">
-										<label for="exampleFormControlInput2" class="form-label">Client Name</label>
-										<input type="text" class="form-control" id="exampleFormControlInput2" placeholder="James Jr.">
-									</div>
-								</div>
-							</div>
-						</form>
 
-
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Save changes</button>
-					</div>
-				</div>
-			</div>
-		</div>
 		<div class="footer">
 			<div class="copyright">
 				<p>Copyright © Designed &amp; Made by <a href="#" target="_blank">RZCoding</a> <span class="current-year">2024</span></p>
@@ -400,7 +377,130 @@
 		</div>
 
 	</div>
+	<script>
+		particlesJS("particles-js", {
+			"particles": {
+				"number": {
+					"value": 50,
+					"density": {
+						"enable": true,
+						"value_area": 800
+					}
+				},
+				"color": {
+					"value": "#17a2b8"
+				},
+				"shape": {
+					"type": "circle",
+					"stroke": {
+						"width": 0,
+						"color": "#000000"
+					},
+					"polygon": {
+						"nb_sides": 5
+					},
+				},
+				"opacity": {
+					"value": 0.5,
+					"random": false,
+					"anim": {
+						"enable": false,
+						"speed": 1,
+						"opacity_min": 0.1,
+						"sync": false
+					}
+				},
+				"size": {
+					"value": 4,
+					"random": true,
+					"anim": {
+						"enable": false,
+						"speed": 40,
+						"size_min": 0.1,
+						"sync": false
+					}
+				},
+				"line_linked": {
+					"enable": true,
+					"distance": 150,
+					"color": "#ffffff",
+					"opacity": 0.4,
+					"width": 1
+				},
+				"move": {
+					"enable": true,
+					"speed": 6,
+					"direction": "none",
+					"random": false,
+					"straight": false,
+					"out_mode": "out",
+					"bounce": false,
+					"attract": {
+						"enable": false,
+						"rotateX": 600,
+						"rotateY": 1200
+					}
+				}
+			},
+			"interactivity": {
+				"detect_on": "canvas",
+				"events": {
+					"onhover": {
+						"enable": false,
+						"mode": "repulse"
+					},
+					"onclick": {
+						"enable": false,
+						"mode": "push"
+					},
+					"resize": true
+				},
+				"modes": {
+					"grab": {
+						"distance": 400,
+						"line_linked": {
+							"opacity": 1
+						}
+					},
+					"bubble": {
+						"distance": 400,
+						"size": 40,
+						"duration": 2,
+						"opacity": 8,
+						"speed": 3
+					},
+					"repulse": {
+						"distance": 200,
+						"duration": 0.4
+					},
+					"push": {
+						"particles_nb": 4
+					},
+					"remove": {
+						"particles_nb": 2
+					}
+				}
+			},
+			"retina_detect": true
+		});
 
+		$(function() {
+			$('input[name=password').on('keydown', function(e) {
+				if (e.keyCode == 13) {
+					$('#btn_login').click();
+				}
+			})
+		})
+
+		function showPassword(elem) {
+			if ($('.passwd').attr('type') == 'password') {
+				$('.passwd').attr('type', 'text');
+			} else {
+				$('.passwd').attr('type', 'password');
+
+			}
+		}
+	</script>
 </body>
 
 </html>

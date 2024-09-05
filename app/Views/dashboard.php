@@ -13,7 +13,8 @@
         box-shadow: 2px 1px 10px 2px rgba(23, 155, 174, 0.7);
     }
 </style>
-<div class="project-page d-flex justify-content-between align-items-center flex-wrap">
+
+<div class="project-page d-flex justify-content-between align-items-center flex-wrap  particles-js-canvas-el">
     <div class="row">
         <div class="col-xl-12">
             <div class="card bg-progradient manage-project">
@@ -34,12 +35,14 @@
         <div class="col-xl-12">
             <div class="row">
                 <div class="col">
-                    <a href="javascript:void(0);" class="card-link">
+                    <a href="javascript:void(0);" class="card-link" " hx-post=" /progresspks" hx-target="#dash-content"
+                        hx-on--before-request="showLoading(true)"
+                        hx-on::after-request="showLoading(false)">
                         <div class="card">
                             <div class="card-body card-padding d-flex align-items-center justify-content-between">
                                 <div class="w-75">
                                     <h4 class="mb-3 text-nowrap">PROGRESS DI PKS</h4>
-                                    <h2 class="fs-32 font-w700 mb-0"><?= $p_pks ?></h2>
+                                    <h2 class="fs-32 font-w700 mb-0"><?= $p_pks ?> <span style="font-size: 1.25rem; color:#17a2b8;">PAKET</span></h2>
                                 </div>
                                 <div style="margin-left: 10px;">
                                     <img src="/pks.png" alt="" width="70">
@@ -50,12 +53,14 @@
                 </div>
 
                 <div class="col">
-                    <a href="javascript:void(0);" class="card-link">
+                <a href="javascript:void(0);" class="card-link" " hx-post=" /progresstekpol" hx-target="#dash-content"
+                        hx-on--before-request="showLoading(true)"
+                        hx-on::after-request="showLoading(false)">
                         <div class="card">
                             <div class="card-body card-padding d-flex align-items-center justify-content-between">
                                 <div class="w-75">
                                     <h4 class="mb-3 text-nowrap">PROGRESS DI TEKPOL</h4>
-                                    <h2 class="fs-32 font-w700 mb-0"><?= $p_tekpol ?></h2>
+                                    <h2 class="fs-32 font-w700 mb-0"><?= $p_tekpol ?> <span style="font-size: 1.25rem; color:#17a2b8;">PAKET</span></h2>
                                 </div>
                                 <div style="margin-left: 10px;">
                                     <img src="/tekpol.png" alt="" width="70">
@@ -66,12 +71,14 @@
                 </div>
 
                 <div class="col">
-                    <a href="javascript:void(0);" class="card-link">
+                <a href="javascript:void(0);" class="card-link" " hx-post=" /progresshps" hx-target="#dash-content"
+                        hx-on--before-request="showLoading(true)"
+                        hx-on::after-request="showLoading(false)">
                         <div class="card">
                             <div class="card-body card-padding d-flex align-items-center justify-content-between">
                                 <div class="w-75">
                                     <h4 class="mb-3 text-nowrap">PROGRESS DI HPS</h4>
-                                    <h2 class="fs-32 font-w700 mb-0"><?= $p_hps ?></h2>
+                                    <h2 class="fs-32 font-w700 mb-0"><?= $p_hps ?> <span style="font-size: 1.25rem; color:#17a2b8;">PAKET</span></h2>
                                 </div>
                                 <div style="margin-left: 10px;">
                                     <img src="/hps.png" alt="" width="70">
@@ -82,12 +89,14 @@
                 </div>
 
                 <div class="col">
-                    <a href="javascript:void(0);" class="card-link">
+                <a href="javascript:void(0);" class="card-link" " hx-post=" /progresspengadaan" hx-target="#dash-content"
+                        hx-on--before-request="showLoading(true)"
+                        hx-on::after-request="showLoading(false)">
                         <div class="card">
                             <div class="card-body card-padding d-flex align-items-center justify-content-between">
                                 <div class="w-75">
                                     <h4 class="mb-3 text-nowrap">PROGRESS <br>DI PENGADAAN</h4>
-                                    <h2 class="fs-32 font-w700 mb-0"><?= $p_pengadaan ?></h2>
+                                    <h2 class="fs-32 font-w700 mb-0"><?= $p_pengadaan ?> <span style="font-size: 1.25rem; color:#17a2b8;">PAKET</span></h2>
                                 </div>
                                 <div style="margin-left: 10px;">
                                     <img src="/pengadaan.png" alt="" width="70">
@@ -96,14 +105,17 @@
                         </div>
                     </a>
                 </div>
+                
 
                 <div class="col">
-                    <a href="javascript:void(0);" class="card-link">
+                <a href="javascript:void(0);" class="card-link" " hx-post="/terbitsppbj" hx-target="#dash-content"
+                        hx-on--before-request="showLoading(true)"
+                        hx-on::after-request="showLoading(false)">
                         <div class="card">
                             <div class="card-body card-padding d-flex align-items-center justify-content-between">
                                 <div class="w-75">
                                     <h4 class="mb-3 text-nowrap">TERBIT SPPBJ</h4>
-                                    <h2 class="fs-32 font-w700 mb-0"><?= $p_pengadaan ?></h2>
+                                    <h2 class="fs-32 font-w700 mb-0"><?= $p_pengadaan ?> <span style="font-size: 1.25rem; color:#17a2b8;">PAKET</span></h2>
                                 </div>
                                 <div style="margin-left: 10px;">
                                     <img src="/sppbj.png" alt="" width="70">
@@ -185,6 +197,6 @@
             </div>
         </div>
     </div>
+    <div id="dash-content">
+    </div>
 </div>
-
-<?= view('dashboard/content') ?>

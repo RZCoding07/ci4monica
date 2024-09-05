@@ -9,21 +9,6 @@
     <meta name="author" content="indiancoder">
     <meta name="robots" content="index, follow">
 
-    <meta name="keywords" content="	admin, admin dashboard, admin template, analytics, bootstrap, bootstrap5, bootstrap 5 admin template, modern, responsive admin dashboard, sales dashboard, sass, ui kit, web app, Codebyte SaaS, User Interface (UI), User Experience (UX), Dashboard Design, SaaS Application, Web Application, Data Visualization, Analytics, Customization, Responsive Design, Bootstrap Framework, Charts and Graphs, Data Management, Reporting, Dark Mode, Mobile-Friendly, Dashboard Components, Integrations, Analytics Dashboard, API Integration, User Authentication">
-
-
-    <meta name="description" content="Elevate your administrative efficiency and enhance productivity with the Codebyte SaaS Admin Dashboard Template. Designed to streamline your tasks, this powerful tool provides a user-friendly interface, robust features, and customizable options, making it the ideal choice for managing your data and operations with ease.">
-
-    <meta property="og:title" content="Codebyte : Codebyte Saas Admin Bootstrap 5 Template | Indiancoder">
-    <meta property="og:description" content="Elevate your administrative efficiency and enhance productivity with the Codebyte SaaS Admin Dashboard Template. Designed to streamline your tasks, this powerful tool provides a user-friendly interface, robust features, and customizable options, making it the ideal choice for managing your data and operations with ease.">
-    <meta property="og:image" content="https://codebyte.indiancoder.com/xhtml/social-image.png">
-    <meta name="format-detection" content="telephone=no">
-
-    <meta name="twitter:title" content="Codebyte : Codebyte Saas Admin Bootstrap 5 Template | Indiancoder">
-    <meta name="twitter:description" content="Elevate your administrative efficiency and enhance productivity with the Codebyte SaaS Admin Dashboard Template. Designed to streamline your tasks, this powerful tool provides a user-friendly interface, robust features, and customizable options, making it the ideal choice for managing your data and operations with ease.">
-    <meta name="twitter:image" content="https://codebyte.indiancoder.com/xhtml/social-image.png">
-    <meta name="twitter:card" content="summary_large_image">
-
     <!-- MOBILE SPECIFIC -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -33,9 +18,21 @@
     <link class="main-css" href="<?= base_url() ?>css/style.css" rel="stylesheet">
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="https://unpkg.com/htmx.org@2.0.2"></script>
-</head>
+
+
+    <script>
+			function showLoading(b) {
+				if (b) {
+					$('#loading-keren').show();
+				} else {
+					$('#loading-keren').hide();
+				}
+			}
+    </script>
 
 <body>
+<?= view('components/loading') ?>
+
     <div class="authincation d-flex flex-column flex-lg-row flex-column-fluid">
         <div class="login-aside text-center d-none d-sm-flex flex-column flex-row-auto">
 
@@ -57,18 +54,23 @@
                                     Capital Expenditure PKS PTPN IV
                                 </h3>
                                 <h4 class="text-center mb-4">Sign in your account</h4>
-                                <form hx-post="/login">
+                                <form 
+                                hx-post="/login"
+                                hx-swap="none"
+                                hx-on--before-request="showLoading(true)"
+                                hx-on::after-request="showLoading(false)"
+                                >
                                     <?= csrf_field() ?>
                                     <div class="mb-3">
                                         <label class="mb-1 form-label">Monica Type</label>
-                                        <select name="monica_type" class="form-control" aria-label="Default select example">
+                                        <select name="req" class="form-control" aria-label="Default select example">
                                             <option value="offfarm">Off Farm</option>
                                             <option value="onfarm">On Farm</option>
                                         </select>
                                     </div>
                                     <div class="mb-3">
                                         <label class="mb-1 form-label">Username</label>
-                                        <input name="username" type="text" class="form-control" value="" placeholder="Username">
+                                        <input name="login" type="text" class="form-control" value="" placeholder="Username">
                                     </div>
                                     <div class="mb-3">
                                         <label class="mb-1 form-label">Password</label>
@@ -89,7 +91,8 @@
 
                                     </div>
                                     <div class="text-center">
-                                        <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                                        <button type="submit"
+                                            class="btn bg-primary text-white btn-block">Sign me in</button>
                                     </div>
                                 </form>
 
@@ -112,7 +115,7 @@
     <script src="<?= base_url() ?>js/ic-sidenav-init.js"></script>
     <script src="<?= base_url() ?>js/demo.js"></script>
     <script src="<?= base_url() ?>js/styleSwitcher.js"></script>
-
+    <?= view('components/notify') ?>
 </body>
 
 </html>

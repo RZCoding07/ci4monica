@@ -33,7 +33,7 @@ var themeOptionArr = {
 	var icThemeSet0 = { /* Default Theme */
 		typography: "poppins",
 		version: "light",
-		layout: "vertical",
+		layout: "horizontal",
 		primary: "color_1",
 		headerBg: "color_1",
 		navheaderBg: "color_1",
@@ -48,7 +48,7 @@ var themeOptionArr = {
 	var icThemeSet1 = {
 		typography: "poppins",
 		version: "light",
-		layout: "vertical",
+		layout: "horizontal",
 		primary: "color_1",
 		headerBg: "color_1",
 		navheaderBg: "color_12",
@@ -79,7 +79,7 @@ var themeOptionArr = {
 	var icThemeSet3 = {
 		typography: "poppins",
 		version: "light",
-		layout: "vertical",
+		layout: "horizontal",
 		primary: "color_10",
 		headerBg: "color_10",
 		navheaderBg: "color_1",
@@ -94,7 +94,7 @@ var themeOptionArr = {
 	var icThemeSet4 = {
 		typography: "poppins",
 		version: "light",
-		layout: "vertical",
+		layout: "horizontal",
 		primary: "color_15",
 		headerBg: "color_1",
 		navheaderBg: "color_1",
@@ -109,7 +109,7 @@ var themeOptionArr = {
 	var icThemeSet5 = {
 		typography: "poppins",
 		version: "light",
-		layout: "vertical",
+		layout: "horizontal",
 		primary: "color_13",
 		headerBg: "color_1",
 		navheaderBg: "color_13",
@@ -283,6 +283,8 @@ var themeOptionArr = {
 
 		/* Set Theme On Page From Cookie */
 		setThemeOptionOnPage();
+
+		console.log(icSettingsOptions);
 	});
 
 	jQuery(window).on('resize', function () {

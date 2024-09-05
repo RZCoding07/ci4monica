@@ -70,78 +70,52 @@
 
             <?php if (session()->get('monica_req') == 'offfarm') : ?>
 
-            <li><a href="#" class="ai-icon" aria-expanded="false" hx-post="/awal" hx-target="#konten" hx-replace-url="/awal"
+                <li><a href="#" class="ai-icon" aria-expanded="false" hx-post="/awal" hx-target="#konten" hx-replace-url="/awal"
 
-                    hx-on--before-request="showLoading(true)"
-                    hx-on::after-request="showLoading(false)">
-                    <i class="flaticon-blog"></i>
-                    <span class="nav-text">
-                        Investasi Awal
-                    </span>
-                </a>
-            </li>
-            <li><a href="#" class="ai-icon" aria-expanded="false" hx-post="/sumberips" hx-target="#konten" hx-replace-url="/sumberips"
+                        hx-on--before-request="showLoading(true)"
+                        hx-on::after-request="showLoading(false)">
+                        <i class="flaticon-blog"></i>
+                        <span class="nav-text">
+                            Investasi Awal
+                        </span>
+                    </a>
+                </li>
+                <li><a href="#" class="ai-icon" aria-expanded="false" hx-post="/sumberips" hx-target="#konten" hx-replace-url="/sumberips"
 
-                    hx-on--before-request="showLoading(true)"
-                    hx-on::after-request="showLoading(false)">
-                    <i class="flaticon-blog"></i>
-                    <span class="nav-text">
-                        Sumber Ips
-                    </span>
-                </a>
-            </li>
+                        hx-on--before-request="showLoading(true)"
+                        hx-on::after-request="showLoading(false)">
+                        <i class="flaticon-blog"></i>
+                        <span class="nav-text">
+                            Sumber Ips
+                        </span>
+                    </a>
+                </li>
 
-            <li><a href="#" class="ai-icon" aria-expanded="false" hx-post="/progresslapangan" hx-target="#konten" hx-replace-url="/progresslapangan"
+                <li><a href="#" class="ai-icon" aria-expanded="false" hx-post="/progresslapangan" hx-target="#konten" hx-replace-url="/progresslapangan"
 
-                    hx-on--before-request="showLoading(true)"
-                    hx-on::after-request="showLoading(false)">
-                    <i class="flaticon-blog"></i>
-                    <span class="nav-text">
-
-
-                        Progress Lap. Investasi
-
-                    </span>
-                </a>
-            </li>
+                        hx-on--before-request="showLoading(true)"
+                        hx-on::after-request="showLoading(false)">
+                        <i class="flaticon-blog"></i>
+                        <span class="nav-text">
 
 
-            <li><a href="<?= base_url('a') ?>" class="ai-icon" aria-expanded="false">
-                    <i class="flaticon-blog"></i>
-                    <span class="nav-text">
-                        Pengawasan Pekerjaan Lapangan
-                    </span>
-                </a>
-            </li>
+                            Progress Lap. Investasi
+
+                        </span>
+                    </a>
+                </li>
 
 
-            <li><a href="<?= base_url('a') ?>" class="ai-icon" aria-expanded="false">
-                    <i class="flaticon-blog"></i>
-                    <span class="nav-text">
-                        Input Uraian Pekerjaan
-                    </span>
-                </a>
-            </li>
+                <li><a href="<?= base_url('a') ?>" class="ai-icon" aria-expanded="false">
+                        <i class="flaticon-blog"></i>
+                        <span class="nav-text">
+                            Pengawasan Pekerjaan Lapangan
+                        </span>
+                    </a>
+                </li>
 
             <?php endif; ?>
 
-
-            <li><a href="<?= base_url('a') ?>" class="ai-icon" aria-expanded="false">
-                    <i class="flaticon-blog"></i>
-                    <span class="nav-text">
-                        Update Progress
-                    </span>
-                </a>
-            </li>
-
-
-            <li><a href="<?= base_url('a') ?>" class="ai-icon" aria-expanded="false">
-                    <i class="flaticon-blog"></i>
-                    <span class="nav-text">
-                        Upload Dokumen
-                    </span>
-                </a>
-            </li>
 
             <li><a href="#" class="ai-icon" aria-expanded="false" hx-get="/dashboard" hx-target="#konten">
                     <i class="flaticon-blog"></i>
@@ -153,3 +127,4 @@
 
     </div>
 </div>
+
