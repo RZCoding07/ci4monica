@@ -1,0 +1,110 @@
+INFO - 2024-08-31 13:35:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-31 13:43:35 --> CodeIgniter\Database\Exceptions\DatabaseException: insertBatch() has no data.
+[Method: POST, Route: Kebun/do_upload]
+in SYSTEMPATH\Database\BaseBuilder.php on line 1807.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2225): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 2 SYSTEMPATH\Model.php(428): CodeIgniter\Database\BaseBuilder->insertBatch([], null, 100)
+ 3 SYSTEMPATH\BaseModel.php(960): CodeIgniter\Model->doInsertBatch([], null, 100, false)
+ 4 APPPATH\Controllers\Kebun.php(90): CodeIgniter\BaseModel->insertBatch([])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-31 13:49:22 --> CodeIgniter\Database\Exceptions\DatabaseException: insertBatch() has no data.
+[Method: POST, Route: Kebun/do_upload]
+in SYSTEMPATH\Database\BaseBuilder.php on line 1807.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2225): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 2 SYSTEMPATH\Model.php(428): CodeIgniter\Database\BaseBuilder->insertBatch([], null, 100)
+ 3 SYSTEMPATH\BaseModel.php(960): CodeIgniter\Model->doInsertBatch([], null, 100, false)
+ 4 APPPATH\Controllers\Kebun.php(90): CodeIgniter\BaseModel->insertBatch([])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+INFO - 2024-08-31 13:57:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-31 14:18:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-31 14:18:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-31 14:20:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-31 14:23:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-31 14:23:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-31 14:25:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-31 14:25:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-31 14:27:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-31 14:27:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-31 14:29:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-31 14:29:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-31 18:43:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-31 20:38:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-08-31 20:38:10 --> mysqli_sql_exception: Table 'ci4monica.stok_lokasi_per_var' doesn't exist in C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `regiona...', 0)
+#1 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `regiona...')
+#2 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `regiona...')
+#3 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `regiona...', Array, false)
+#4 C:\laragon\www\ci4monica\app\Controllers\StokBibit.php(84): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\StokBibit->tebel()
+#6 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StokBibit))
+#7 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\laragon\www\ci4monica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2024-08-31 20:38:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'ci4monica.stok_lokasi_per_var' doesn't exist
+[Method: GET, Route: StokBibit/tebel]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `regional`, `kebun`, `varietas`, `lokasi`, `nursery_month_1`, `nursery_month_2`, `nursery_month_3`, `nursery_month_4`, `nursery_month_5`, `nursery_month_6`, `nursery_month_7`, `nursery_month_8`, `nursery_month_9`, `nursery_month_10`, `nursery_month_11`, `nursery_month_12`, `nursery_month_13`, `nursery_month_14`, `nursery_month_15`, `nursery_month_16`, `nursery_month_17`, `nursery_month_18`, `nursery_month_19`, `nursery_month_20`, `nursery_month_21`, `nursery_month_22`, `nursery_month_23`, `nursery_month_24`, `nursery_month_25`, `nursery_month_26`, `nursery_month_27`, `nursery_month_28`, `nursery_month_29`, `nursery_month_30_plus`, `jumlah`, `bulan`, `tahun`
+FROM `stok_lokasi_per_var`', [], false)
+ 2 APPPATH\Controllers\StokBibit.php(84): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StokBibit->tebel()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StokBibit))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-31 20:38:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'ci4monica.stok_lokasi_per_var' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `regional`, `kebun`, `varietas`, `lokasi`, `nursery_month_1`, `nursery_month_2`, `nursery_month_3`, `nursery_month_4`, `nursery_month_5`, `nursery_month_6`, `nursery_month_7`, `nursery_month_8`, `nursery_month_9`, `nursery_month_10`, `nursery_month_11`, `nursery_month_12`, `nursery_month_13`, `nursery_month_14`, `nursery_month_15`, `nursery_month_16`, `nursery_month_17`, `nursery_month_18`, `nursery_month_19`, `nursery_month_20`, `nursery_month_21`, `nursery_month_22`, `nursery_month_23`, `nursery_month_24`, `nursery_month_25`, `nursery_month_26`, `nursery_month_27`, `nursery_month_28`, `nursery_month_29`, `nursery_month_30_plus`, `jumlah`, `bulan`, `tahun`
+FROM `stok_lokasi_per_var`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `regional`, `kebun`, `varietas`, `lokasi`, `nursery_month_1`, `nursery_month_2`, `nursery_month_3`, `nursery_month_4`, `nursery_month_5`, `nursery_month_6`, `nursery_month_7`, `nursery_month_8`, `nursery_month_9`, `nursery_month_10`, `nursery_month_11`, `nursery_month_12`, `nursery_month_13`, `nursery_month_14`, `nursery_month_15`, `nursery_month_16`, `nursery_month_17`, `nursery_month_18`, `nursery_month_19`, `nursery_month_20`, `nursery_month_21`, `nursery_month_22`, `nursery_month_23`, `nursery_month_24`, `nursery_month_25`, `nursery_month_26`, `nursery_month_27`, `nursery_month_28`, `nursery_month_29`, `nursery_month_30_plus`, `jumlah`, `bulan`, `tahun`
+FROM `stok_lokasi_per_var`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `regional`, `kebun`, `varietas`, `lokasi`, `nursery_month_1`, `nursery_month_2`, `nursery_month_3`, `nursery_month_4`, `nursery_month_5`, `nursery_month_6`, `nursery_month_7`, `nursery_month_8`, `nursery_month_9`, `nursery_month_10`, `nursery_month_11`, `nursery_month_12`, `nursery_month_13`, `nursery_month_14`, `nursery_month_15`, `nursery_month_16`, `nursery_month_17`, `nursery_month_18`, `nursery_month_19`, `nursery_month_20`, `nursery_month_21`, `nursery_month_22`, `nursery_month_23`, `nursery_month_24`, `nursery_month_25`, `nursery_month_26`, `nursery_month_27`, `nursery_month_28`, `nursery_month_29`, `nursery_month_30_plus`, `jumlah`, `bulan`, `tahun`
+FROM `stok_lokasi_per_var`', [], false)
+ 4 APPPATH\Controllers\StokBibit.php(84): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StokBibit->tebel()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StokBibit))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-31 20:38:10 --> [Caused by] mysqli_sql_exception: Table 'ci4monica.stok_lokasi_per_var' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `regional`, `kebun`, `varietas`, `lokasi`, `nursery_month_1`, `nursery_month_2`, `nursery_month_3`, `nursery_month_4`, `nursery_month_5`, `nursery_month_6`, `nursery_month_7`, `nursery_month_8`, `nursery_month_9`, `nursery_month_10`, `nursery_month_11`, `nursery_month_12`, `nursery_month_13`, `nursery_month_14`, `nursery_month_15`, `nursery_month_16`, `nursery_month_17`, `nursery_month_18`, `nursery_month_19`, `nursery_month_20`, `nursery_month_21`, `nursery_month_22`, `nursery_month_23`, `nursery_month_24`, `nursery_month_25`, `nursery_month_26`, `nursery_month_27`, `nursery_month_28`, `nursery_month_29`, `nursery_month_30_plus`, `jumlah`, `bulan`, `tahun`
+FROM `stok_lokasi_per_var`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `regional`, `kebun`, `varietas`, `lokasi`, `nursery_month_1`, `nursery_month_2`, `nursery_month_3`, `nursery_month_4`, `nursery_month_5`, `nursery_month_6`, `nursery_month_7`, `nursery_month_8`, `nursery_month_9`, `nursery_month_10`, `nursery_month_11`, `nursery_month_12`, `nursery_month_13`, `nursery_month_14`, `nursery_month_15`, `nursery_month_16`, `nursery_month_17`, `nursery_month_18`, `nursery_month_19`, `nursery_month_20`, `nursery_month_21`, `nursery_month_22`, `nursery_month_23`, `nursery_month_24`, `nursery_month_25`, `nursery_month_26`, `nursery_month_27`, `nursery_month_28`, `nursery_month_29`, `nursery_month_30_plus`, `jumlah`, `bulan`, `tahun`
+FROM `stok_lokasi_per_var`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `regional`, `kebun`, `varietas`, `lokasi`, `nursery_month_1`, `nursery_month_2`, `nursery_month_3`, `nursery_month_4`, `nursery_month_5`, `nursery_month_6`, `nursery_month_7`, `nursery_month_8`, `nursery_month_9`, `nursery_month_10`, `nursery_month_11`, `nursery_month_12`, `nursery_month_13`, `nursery_month_14`, `nursery_month_15`, `nursery_month_16`, `nursery_month_17`, `nursery_month_18`, `nursery_month_19`, `nursery_month_20`, `nursery_month_21`, `nursery_month_22`, `nursery_month_23`, `nursery_month_24`, `nursery_month_25`, `nursery_month_26`, `nursery_month_27`, `nursery_month_28`, `nursery_month_29`, `nursery_month_30_plus`, `jumlah`, `bulan`, `tahun`
+FROM `stok_lokasi_per_var`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `regional`, `kebun`, `varietas`, `lokasi`, `nursery_month_1`, `nursery_month_2`, `nursery_month_3`, `nursery_month_4`, `nursery_month_5`, `nursery_month_6`, `nursery_month_7`, `nursery_month_8`, `nursery_month_9`, `nursery_month_10`, `nursery_month_11`, `nursery_month_12`, `nursery_month_13`, `nursery_month_14`, `nursery_month_15`, `nursery_month_16`, `nursery_month_17`, `nursery_month_18`, `nursery_month_19`, `nursery_month_20`, `nursery_month_21`, `nursery_month_22`, `nursery_month_23`, `nursery_month_24`, `nursery_month_25`, `nursery_month_26`, `nursery_month_27`, `nursery_month_28`, `nursery_month_29`, `nursery_month_30_plus`, `jumlah`, `bulan`, `tahun`
+FROM `stok_lokasi_per_var`', [], false)
+ 5 APPPATH\Controllers\StokBibit.php(84): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StokBibit->tebel()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StokBibit))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+INFO - 2024-08-31 20:39:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-31 20:40:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-31 20:40:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-31 20:41:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-31 21:41:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

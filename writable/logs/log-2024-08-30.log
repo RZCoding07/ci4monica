@@ -1,0 +1,1012 @@
+CRITICAL - 2024-08-30 10:17:42 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "dashboard/content.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(81): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard/content.php')
+ 2 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard/content', [], true)
+ 3 APPPATH\Views\dashboard.php(190): view('dashboard/content')
+ 4 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php')
+ 5 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard', [], true)
+ 7 APPPATH\Controllers\BaseController.php(111): view('dashboard', [...])
+ 8 APPPATH\Controllers\Dashboard.php(26): App\Controllers\BaseController->getView([...], Object(Michalsn\CodeIgniterHtmx\HTTP\IncomingRequest), 'dashboard')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 10:22:22 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "dashboard/content.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(81): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard/content.php')
+ 2 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard/content', [], true)
+ 3 APPPATH\Views\dashboard.php(190): view('dashboard/content')
+ 4 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php')
+ 5 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard', [], true)
+ 7 APPPATH\Controllers\BaseController.php(111): view('dashboard', [...])
+ 8 APPPATH\Controllers\Dashboard.php(26): App\Controllers\BaseController->getView([...], Object(Michalsn\CodeIgniterHtmx\HTTP\IncomingRequest), 'dashboard')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 11:12:04 --> ErrorException: include(C:\laragon\www\ci4monica\vendor\composer/../../app/Controllers/Dashboard.php): Failed to open stream: No such file or directory
+[Method: GET, Route: /]
+in VENDORPATH\composer\ClassLoader.php on line 576.
+ 1 VENDORPATH\composer\ClassLoader.php(576): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\laragon\\www\\ci4monica\\vendor\\composer/../../app/Controllers/Dashboard.php): Failed to open stream: No such file or directory', 'C:\\laragon\\www\\ci4monica\\vendor\\composer\\ClassLoader.php', 576)
+ 2 VENDORPATH\composer\ClassLoader.php(576): include()
+ 3 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\laragon\\www\\ci4monica\\vendor\\composer/../../app/Controllers/Dashboard.php')
+ 4 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers\\Dashboard')
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Dashboard', true)
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 11:51:21 --> ErrorException: include(C:\laragon\www\ci4monica\vendor\composer/../../app/Controllers/Dashboard.php): Failed to open stream: No such file or directory
+[Method: GET, Route: /]
+in VENDORPATH\composer\ClassLoader.php on line 576.
+ 1 VENDORPATH\composer\ClassLoader.php(576): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\laragon\\www\\ci4monica\\vendor\\composer/../../app/Controllers/Dashboard.php): Failed to open stream: No such file or directory', 'C:\\laragon\\www\\ci4monica\\vendor\\composer\\ClassLoader.php', 576)
+ 2 VENDORPATH\composer\ClassLoader.php(576): include()
+ 3 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\laragon\\www\\ci4monica\\vendor\\composer/../../app/Controllers/Dashboard.php')
+ 4 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controllers\\Dashboard')
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Dashboard', true)
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 11:51:27 --> ErrorException: New expressions are not supported in this context
+[Method: GET, Route: pks]
+in APPPATH\Controllers\PKS.php on line 15.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-08-30 11:53:29 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "dashboard/content.php"
+[Method: GET, Route: offfarm/dashboard]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(81): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard/content.php')
+ 2 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard/content', [], true)
+ 3 APPPATH\Views\dashboard.php(190): view('dashboard/content')
+ 4 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php')
+ 5 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard', [], true)
+ 7 APPPATH\Controllers\BaseController.php(111): view('dashboard', [...])
+ 8 APPPATH\Controllers\OffFarm\Dashboard.php(23): App\Controllers\BaseController->getView([...], Object(Michalsn\CodeIgniterHtmx\HTTP\IncomingRequest), 'dashboard')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OffFarm\Dashboard->index()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OffFarm\Dashboard))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+INFO - 2024-08-30 11:56:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-30 12:50:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-30 12:53:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-30 12:54:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-30 12:54:16 --> ErrorException: Cannot declare class App\Controllers\PKS, because the name is already in use
+[Method: POST, Route: regional]
+in APPPATH\Controllers\Regional.php on line 11.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-08-30 12:54:17 --> ErrorException: Cannot declare class App\Controllers\PKS, because the name is already in use
+[Method: POST, Route: regional]
+in APPPATH\Controllers\Regional.php on line 11.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-08-30 12:54:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-30 12:54:25 --> ErrorException: Cannot declare class App\Controllers\PKS, because the name is already in use
+[Method: POST, Route: regional]
+in APPPATH\Controllers\Regional.php on line 11.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-08-30 12:54:25 --> ErrorException: Cannot declare class App\Controllers\PKS, because the name is already in use
+[Method: POST, Route: regional]
+in APPPATH\Controllers\Regional.php on line 11.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-08-30 12:54:26 --> ErrorException: Cannot declare class App\Controllers\PKS, because the name is already in use
+[Method: POST, Route: regional]
+in APPPATH\Controllers\Regional.php on line 11.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-08-30 12:54:50 --> ErrorException: Cannot declare class App\Controllers\PKS, because the name is already in use
+[Method: POST, Route: regional]
+in APPPATH\Controllers\Regional.php on line 11.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-08-30 12:54:53 --> ErrorException: Cannot declare class App\Controllers\PKS, because the name is already in use
+[Method: GET, Route: regional]
+in APPPATH\Controllers\Regional.php on line 11.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-08-30 12:55:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-30 12:55:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-30 12:57:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-30 12:58:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-30 14:24:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-30 14:24:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-30 14:29:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-08-30 14:30:05 --> mysqli_sql_exception: Unknown column 'kebun.regional' in 'on clause' in C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\laragon\www\ci4monica\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 C:\laragon\www\ci4monica\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(174): Hermawan\DataTables\DataTableQuery->countAll()
+#6 C:\laragon\www\ci4monica\app\Controllers\Kebun.php(40): Hermawan\DataTables\DataTable->toJson()
+#7 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Kebun->tebel()
+#8 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+#9 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\ci4monica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2024-08-30 14:30:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kebun.regional' in 'on clause'
+[Method: GET, Route: Kebun/tebel]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `pks`
+JOIN `regional` ON `regional`.`id` = `kebun`.`regional`', [], false)
+ 2 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 3 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(174): Hermawan\DataTables\DataTableQuery->countAll()
+ 4 APPPATH\Controllers\Kebun.php(40): Hermawan\DataTables\DataTable->toJson()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->tebel()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:30:05 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kebun.regional' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `pks`
+JOIN `regional` ON `regional`.`id` = `kebun`.`regional`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `pks`
+JOIN `regional` ON `regional`.`id` = `kebun`.`regional`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `pks`
+JOIN `regional` ON `regional`.`id` = `kebun`.`regional`', [], false)
+ 4 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(174): Hermawan\DataTables\DataTableQuery->countAll()
+ 6 APPPATH\Controllers\Kebun.php(40): Hermawan\DataTables\DataTable->toJson()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->tebel()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:30:05 --> [Caused by] mysqli_sql_exception: Unknown column 'kebun.regional' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `pks`
+JOIN `regional` ON `regional`.`id` = `kebun`.`regional`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `pks`
+JOIN `regional` ON `regional`.`id` = `kebun`.`regional`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `pks`
+JOIN `regional` ON `regional`.`id` = `kebun`.`regional`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `pks`
+JOIN `regional` ON `regional`.`id` = `kebun`.`regional`', [], false)
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 6 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(174): Hermawan\DataTables\DataTableQuery->countAll()
+ 7 APPPATH\Controllers\Kebun.php(40): Hermawan\DataTables\DataTable->toJson()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->tebel()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:30:07 --> ErrorException: Cannot declare class App\Controllers\OffFarm\Dashboard, because the name is already in use
+[Method: GET, Route: dashboard]
+in APPPATH\Controllers\Dashboard.php on line 8.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-08-30 14:30:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-08-30 14:30:12 --> mysqli_sql_exception: Unknown column 'kebun.regional' in 'on clause' in C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\laragon\www\ci4monica\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 C:\laragon\www\ci4monica\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(174): Hermawan\DataTables\DataTableQuery->countAll()
+#6 C:\laragon\www\ci4monica\app\Controllers\Kebun.php(40): Hermawan\DataTables\DataTable->toJson()
+#7 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Kebun->tebel()
+#8 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+#9 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\ci4monica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2024-08-30 14:30:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kebun.regional' in 'on clause'
+[Method: GET, Route: Kebun/tebel]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `pks`
+JOIN `regional` ON `regional`.`id` = `kebun`.`regional`', [], false)
+ 2 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 3 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(174): Hermawan\DataTables\DataTableQuery->countAll()
+ 4 APPPATH\Controllers\Kebun.php(40): Hermawan\DataTables\DataTable->toJson()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->tebel()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:30:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kebun.regional' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `pks`
+JOIN `regional` ON `regional`.`id` = `kebun`.`regional`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `pks`
+JOIN `regional` ON `regional`.`id` = `kebun`.`regional`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `pks`
+JOIN `regional` ON `regional`.`id` = `kebun`.`regional`', [], false)
+ 4 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(174): Hermawan\DataTables\DataTableQuery->countAll()
+ 6 APPPATH\Controllers\Kebun.php(40): Hermawan\DataTables\DataTable->toJson()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->tebel()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:30:12 --> [Caused by] mysqli_sql_exception: Unknown column 'kebun.regional' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `pks`
+JOIN `regional` ON `regional`.`id` = `kebun`.`regional`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `pks`
+JOIN `regional` ON `regional`.`id` = `kebun`.`regional`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `pks`
+JOIN `regional` ON `regional`.`id` = `kebun`.`regional`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `pks`
+JOIN `regional` ON `regional`.`id` = `kebun`.`regional`', [], false)
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 6 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(174): Hermawan\DataTables\DataTableQuery->countAll()
+ 7 APPPATH\Controllers\Kebun.php(40): Hermawan\DataTables\DataTable->toJson()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->tebel()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+INFO - 2024-08-30 14:30:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-08-30 14:30:23 --> mysqli_sql_exception: Unknown column 'kebun.regional' in 'on clause' in C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\laragon\www\ci4monica\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 C:\laragon\www\ci4monica\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(174): Hermawan\DataTables\DataTableQuery->countAll()
+#6 C:\laragon\www\ci4monica\app\Controllers\Kebun.php(40): Hermawan\DataTables\DataTable->toJson()
+#7 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Kebun->tebel()
+#8 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+#9 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\ci4monica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2024-08-30 14:30:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kebun.regional' in 'on clause'
+[Method: GET, Route: Kebun/tebel]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `pks`
+JOIN `regional` ON `regional`.`id` = `kebun`.`regional`', [], false)
+ 2 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 3 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(174): Hermawan\DataTables\DataTableQuery->countAll()
+ 4 APPPATH\Controllers\Kebun.php(40): Hermawan\DataTables\DataTable->toJson()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->tebel()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:30:23 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kebun.regional' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `pks`
+JOIN `regional` ON `regional`.`id` = `kebun`.`regional`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `pks`
+JOIN `regional` ON `regional`.`id` = `kebun`.`regional`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `pks`
+JOIN `regional` ON `regional`.`id` = `kebun`.`regional`', [], false)
+ 4 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(174): Hermawan\DataTables\DataTableQuery->countAll()
+ 6 APPPATH\Controllers\Kebun.php(40): Hermawan\DataTables\DataTable->toJson()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->tebel()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:30:23 --> [Caused by] mysqli_sql_exception: Unknown column 'kebun.regional' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `pks`
+JOIN `regional` ON `regional`.`id` = `kebun`.`regional`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `pks`
+JOIN `regional` ON `regional`.`id` = `kebun`.`regional`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `pks`
+JOIN `regional` ON `regional`.`id` = `kebun`.`regional`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `pks`
+JOIN `regional` ON `regional`.`id` = `kebun`.`regional`', [], false)
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 6 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(174): Hermawan\DataTables\DataTableQuery->countAll()
+ 7 APPPATH\Controllers\Kebun.php(40): Hermawan\DataTables\DataTable->toJson()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->tebel()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+ERROR - 2024-08-30 14:30:26 --> mysqli_sql_exception: Unknown column 'kebun.regional' in 'on clause' in C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\laragon\www\ci4monica\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 C:\laragon\www\ci4monica\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(174): Hermawan\DataTables\DataTableQuery->countAll()
+#6 C:\laragon\www\ci4monica\app\Controllers\Kebun.php(40): Hermawan\DataTables\DataTable->toJson()
+#7 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Kebun->tebel()
+#8 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+#9 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\ci4monica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2024-08-30 14:30:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kebun.regional' in 'on clause'
+[Method: GET, Route: Kebun/tebel]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `pks`
+JOIN `regional` ON `regional`.`id` = `kebun`.`regional`', [], false)
+ 2 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 3 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(174): Hermawan\DataTables\DataTableQuery->countAll()
+ 4 APPPATH\Controllers\Kebun.php(40): Hermawan\DataTables\DataTable->toJson()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->tebel()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:30:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kebun.regional' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `pks`
+JOIN `regional` ON `regional`.`id` = `kebun`.`regional`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `pks`
+JOIN `regional` ON `regional`.`id` = `kebun`.`regional`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `pks`
+JOIN `regional` ON `regional`.`id` = `kebun`.`regional`', [], false)
+ 4 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(174): Hermawan\DataTables\DataTableQuery->countAll()
+ 6 APPPATH\Controllers\Kebun.php(40): Hermawan\DataTables\DataTable->toJson()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->tebel()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:30:26 --> [Caused by] mysqli_sql_exception: Unknown column 'kebun.regional' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `pks`
+JOIN `regional` ON `regional`.`id` = `kebun`.`regional`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `pks`
+JOIN `regional` ON `regional`.`id` = `kebun`.`regional`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `pks`
+JOIN `regional` ON `regional`.`id` = `kebun`.`regional`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1728): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `pks`
+JOIN `regional` ON `regional`.`id` = `kebun`.`regional`', [], false)
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(53): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 6 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(174): Hermawan\DataTables\DataTableQuery->countAll()
+ 7 APPPATH\Controllers\Kebun.php(40): Hermawan\DataTables\DataTable->toJson()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->tebel()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+INFO - 2024-08-30 14:31:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-30 14:34:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-30 14:42:18 --> ErrorException: Undefined array key 4
+[Method: POST, Route: Kebun/do_upload]
+in APPPATH\Controllers\Kebun.php on line 85.
+ 1 APPPATH\Controllers\Kebun.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Kebun.php', 85)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:42:18 --> ErrorException: Undefined array key 4
+[Method: POST, Route: Kebun/do_upload]
+in APPPATH\Controllers\Kebun.php on line 85.
+ 1 APPPATH\Controllers\Kebun.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Kebun.php', 85)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:42:19 --> ErrorException: Undefined array key 4
+[Method: POST, Route: Kebun/do_upload]
+in APPPATH\Controllers\Kebun.php on line 85.
+ 1 APPPATH\Controllers\Kebun.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Kebun.php', 85)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:42:19 --> ErrorException: Undefined array key 4
+[Method: POST, Route: Kebun/do_upload]
+in APPPATH\Controllers\Kebun.php on line 85.
+ 1 APPPATH\Controllers\Kebun.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Kebun.php', 85)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:42:19 --> ErrorException: Undefined array key 4
+[Method: POST, Route: Kebun/do_upload]
+in APPPATH\Controllers\Kebun.php on line 85.
+ 1 APPPATH\Controllers\Kebun.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Kebun.php', 85)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:42:19 --> ErrorException: Undefined array key 4
+[Method: POST, Route: Kebun/do_upload]
+in APPPATH\Controllers\Kebun.php on line 85.
+ 1 APPPATH\Controllers\Kebun.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Kebun.php', 85)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:42:19 --> ErrorException: Undefined array key 4
+[Method: POST, Route: Kebun/do_upload]
+in APPPATH\Controllers\Kebun.php on line 85.
+ 1 APPPATH\Controllers\Kebun.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Kebun.php', 85)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:42:19 --> ErrorException: Undefined array key 4
+[Method: POST, Route: Kebun/do_upload]
+in APPPATH\Controllers\Kebun.php on line 85.
+ 1 APPPATH\Controllers\Kebun.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Kebun.php', 85)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:42:19 --> ErrorException: Undefined array key 4
+[Method: POST, Route: Kebun/do_upload]
+in APPPATH\Controllers\Kebun.php on line 85.
+ 1 APPPATH\Controllers\Kebun.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Kebun.php', 85)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:42:41 --> ErrorException: Undefined array key 4
+[Method: POST, Route: Kebun/do_upload]
+in APPPATH\Controllers\Kebun.php on line 85.
+ 1 APPPATH\Controllers\Kebun.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Kebun.php', 85)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:42:41 --> ErrorException: Undefined array key 4
+[Method: POST, Route: Kebun/do_upload]
+in APPPATH\Controllers\Kebun.php on line 85.
+ 1 APPPATH\Controllers\Kebun.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Kebun.php', 85)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:42:42 --> ErrorException: Undefined array key 4
+[Method: POST, Route: Kebun/do_upload]
+in APPPATH\Controllers\Kebun.php on line 85.
+ 1 APPPATH\Controllers\Kebun.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Kebun.php', 85)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:42:42 --> ErrorException: Undefined array key 4
+[Method: POST, Route: Kebun/do_upload]
+in APPPATH\Controllers\Kebun.php on line 85.
+ 1 APPPATH\Controllers\Kebun.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Kebun.php', 85)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:42:42 --> ErrorException: Undefined array key 4
+[Method: POST, Route: Kebun/do_upload]
+in APPPATH\Controllers\Kebun.php on line 85.
+ 1 APPPATH\Controllers\Kebun.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Kebun.php', 85)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:42:42 --> ErrorException: Undefined array key 4
+[Method: POST, Route: Kebun/do_upload]
+in APPPATH\Controllers\Kebun.php on line 85.
+ 1 APPPATH\Controllers\Kebun.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Kebun.php', 85)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:42:42 --> ErrorException: Undefined array key 4
+[Method: POST, Route: Kebun/do_upload]
+in APPPATH\Controllers\Kebun.php on line 85.
+ 1 APPPATH\Controllers\Kebun.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Kebun.php', 85)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:42:42 --> ErrorException: Undefined array key 4
+[Method: POST, Route: Kebun/do_upload]
+in APPPATH\Controllers\Kebun.php on line 85.
+ 1 APPPATH\Controllers\Kebun.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Kebun.php', 85)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:42:42 --> ErrorException: Undefined array key 4
+[Method: POST, Route: Kebun/do_upload]
+in APPPATH\Controllers\Kebun.php on line 85.
+ 1 APPPATH\Controllers\Kebun.php(85): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Kebun.php', 85)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+INFO - 2024-08-30 14:44:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-30 14:44:54 --> ErrorException: Undefined array key 4
+[Method: POST, Route: Kebun/do_upload]
+in APPPATH\Controllers\Kebun.php on line 88.
+ 1 APPPATH\Controllers\Kebun.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Kebun.php', 88)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:44:54 --> ErrorException: Undefined array key 4
+[Method: POST, Route: Kebun/do_upload]
+in APPPATH\Controllers\Kebun.php on line 88.
+ 1 APPPATH\Controllers\Kebun.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Kebun.php', 88)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:44:54 --> ErrorException: Undefined array key 4
+[Method: POST, Route: Kebun/do_upload]
+in APPPATH\Controllers\Kebun.php on line 88.
+ 1 APPPATH\Controllers\Kebun.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Kebun.php', 88)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:44:54 --> ErrorException: Undefined array key 4
+[Method: POST, Route: Kebun/do_upload]
+in APPPATH\Controllers\Kebun.php on line 88.
+ 1 APPPATH\Controllers\Kebun.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Kebun.php', 88)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:44:55 --> ErrorException: Undefined array key 4
+[Method: POST, Route: Kebun/do_upload]
+in APPPATH\Controllers\Kebun.php on line 88.
+ 1 APPPATH\Controllers\Kebun.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Kebun.php', 88)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:44:55 --> ErrorException: Undefined array key 4
+[Method: POST, Route: Kebun/do_upload]
+in APPPATH\Controllers\Kebun.php on line 88.
+ 1 APPPATH\Controllers\Kebun.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Kebun.php', 88)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:44:55 --> ErrorException: Undefined array key 4
+[Method: POST, Route: Kebun/do_upload]
+in APPPATH\Controllers\Kebun.php on line 88.
+ 1 APPPATH\Controllers\Kebun.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Kebun.php', 88)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:44:55 --> ErrorException: Undefined array key 4
+[Method: POST, Route: Kebun/do_upload]
+in APPPATH\Controllers\Kebun.php on line 88.
+ 1 APPPATH\Controllers\Kebun.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Kebun.php', 88)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:44:55 --> ErrorException: Undefined array key 4
+[Method: POST, Route: Kebun/do_upload]
+in APPPATH\Controllers\Kebun.php on line 88.
+ 1 APPPATH\Controllers\Kebun.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Kebun.php', 88)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:44:55 --> CodeIgniter\Database\Exceptions\DatabaseException: insertBatch() has no data.
+[Method: POST, Route: Kebun/do_upload]
+in SYSTEMPATH\Database\BaseBuilder.php on line 1807.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2225): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 2 SYSTEMPATH\Model.php(428): CodeIgniter\Database\BaseBuilder->insertBatch([], null, 100)
+ 3 SYSTEMPATH\BaseModel.php(960): CodeIgniter\Model->doInsertBatch([], null, 100, false)
+ 4 APPPATH\Controllers\Kebun.php(92): CodeIgniter\BaseModel->insertBatch([])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:45:02 --> ErrorException: Undefined array key 4
+[Method: POST, Route: Kebun/do_upload]
+in APPPATH\Controllers\Kebun.php on line 88.
+ 1 APPPATH\Controllers\Kebun.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Kebun.php', 88)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:45:02 --> ErrorException: Undefined array key 4
+[Method: POST, Route: Kebun/do_upload]
+in APPPATH\Controllers\Kebun.php on line 88.
+ 1 APPPATH\Controllers\Kebun.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Kebun.php', 88)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:45:02 --> ErrorException: Undefined array key 4
+[Method: POST, Route: Kebun/do_upload]
+in APPPATH\Controllers\Kebun.php on line 88.
+ 1 APPPATH\Controllers\Kebun.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Kebun.php', 88)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:45:02 --> ErrorException: Undefined array key 4
+[Method: POST, Route: Kebun/do_upload]
+in APPPATH\Controllers\Kebun.php on line 88.
+ 1 APPPATH\Controllers\Kebun.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Kebun.php', 88)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:45:02 --> ErrorException: Undefined array key 4
+[Method: POST, Route: Kebun/do_upload]
+in APPPATH\Controllers\Kebun.php on line 88.
+ 1 APPPATH\Controllers\Kebun.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Kebun.php', 88)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:45:02 --> ErrorException: Undefined array key 4
+[Method: POST, Route: Kebun/do_upload]
+in APPPATH\Controllers\Kebun.php on line 88.
+ 1 APPPATH\Controllers\Kebun.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Kebun.php', 88)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:45:02 --> ErrorException: Undefined array key 4
+[Method: POST, Route: Kebun/do_upload]
+in APPPATH\Controllers\Kebun.php on line 88.
+ 1 APPPATH\Controllers\Kebun.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Kebun.php', 88)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:45:02 --> ErrorException: Undefined array key 4
+[Method: POST, Route: Kebun/do_upload]
+in APPPATH\Controllers\Kebun.php on line 88.
+ 1 APPPATH\Controllers\Kebun.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Kebun.php', 88)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:45:03 --> ErrorException: Undefined array key 4
+[Method: POST, Route: Kebun/do_upload]
+in APPPATH\Controllers\Kebun.php on line 88.
+ 1 APPPATH\Controllers\Kebun.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 4', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Kebun.php', 88)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:45:03 --> CodeIgniter\Database\Exceptions\DatabaseException: insertBatch() has no data.
+[Method: POST, Route: Kebun/do_upload]
+in SYSTEMPATH\Database\BaseBuilder.php on line 1807.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2225): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 2 SYSTEMPATH\Model.php(428): CodeIgniter\Database\BaseBuilder->insertBatch([], null, 100)
+ 3 SYSTEMPATH\BaseModel.php(960): CodeIgniter\Model->doInsertBatch([], null, 100, false)
+ 4 APPPATH\Controllers\Kebun.php(92): CodeIgniter\BaseModel->insertBatch([])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+INFO - 2024-08-30 14:47:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-30 14:47:36 --> CodeIgniter\Database\Exceptions\DatabaseException: insertBatch() has no data.
+[Method: POST, Route: Kebun/do_upload]
+in SYSTEMPATH\Database\BaseBuilder.php on line 1807.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2225): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 2 SYSTEMPATH\Model.php(428): CodeIgniter\Database\BaseBuilder->insertBatch([], null, 100)
+ 3 SYSTEMPATH\BaseModel.php(960): CodeIgniter\Model->doInsertBatch([], null, 100, false)
+ 4 APPPATH\Controllers\Kebun.php(91): CodeIgniter\BaseModel->insertBatch([])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+INFO - 2024-08-30 14:48:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-30 14:48:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-30 14:48:37 --> CodeIgniter\Database\Exceptions\DatabaseException: insertBatch() has no data.
+[Method: POST, Route: Kebun/do_upload]
+in SYSTEMPATH\Database\BaseBuilder.php on line 1807.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2225): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 2 SYSTEMPATH\Model.php(428): CodeIgniter\Database\BaseBuilder->insertBatch([], null, 100)
+ 3 SYSTEMPATH\BaseModel.php(960): CodeIgniter\Model->doInsertBatch([], null, 100, false)
+ 4 APPPATH\Controllers\Kebun.php(91): CodeIgniter\BaseModel->insertBatch([])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->do_upload()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+ERROR - 2024-08-30 14:49:39 --> mysqli_sql_exception: Unknown column 'luas_ha' in 'field list' in C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `regiona...', 0)
+#1 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `regiona...')
+#2 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `regiona...')
+#3 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `regiona...', Array, false)
+#4 C:\laragon\www\ci4monica\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(232): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ci4monica\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+#6 C:\laragon\www\ci4monica\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(176): Hermawan\DataTables\DataTableQuery->getDataResult()
+#7 C:\laragon\www\ci4monica\app\Controllers\Kebun.php(41): Hermawan\DataTables\DataTable->toJson()
+#8 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Kebun->tebel()
+#9 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+#10 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\ci4monica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2024-08-30 14:49:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'luas_ha' in 'field list'
+[Method: GET, Route: Kebun/tebel]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `regional`.`fullname`, `lokasi`, `luas_ha`, `pn`, `mn`, `jumlah`, `keterangan`
+FROM `kebun`
+JOIN `regional` ON `regional`.`fullname` = `kebun`.`regional`
+ LIMIT 15', [], false)
+ 2 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+ 4 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(176): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 5 APPPATH\Controllers\Kebun.php(41): Hermawan\DataTables\DataTable->toJson()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->tebel()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:49:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'luas_ha' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `regional`.`fullname`, `lokasi`, `luas_ha`, `pn`, `mn`, `jumlah`, `keterangan`
+FROM `kebun`
+JOIN `regional` ON `regional`.`fullname` = `kebun`.`regional`
+ LIMIT 15')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `regional`.`fullname`, `lokasi`, `luas_ha`, `pn`, `mn`, `jumlah`, `keterangan`
+FROM `kebun`
+JOIN `regional` ON `regional`.`fullname` = `kebun`.`regional`
+ LIMIT 15')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `regional`.`fullname`, `lokasi`, `luas_ha`, `pn`, `mn`, `jumlah`, `keterangan`
+FROM `kebun`
+JOIN `regional` ON `regional`.`fullname` = `kebun`.`regional`
+ LIMIT 15', [], false)
+ 4 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+ 6 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(176): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 7 APPPATH\Controllers\Kebun.php(41): Hermawan\DataTables\DataTable->toJson()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->tebel()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-30 14:49:39 --> [Caused by] mysqli_sql_exception: Unknown column 'luas_ha' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `regional`.`fullname`, `lokasi`, `luas_ha`, `pn`, `mn`, `jumlah`, `keterangan`
+FROM `kebun`
+JOIN `regional` ON `regional`.`fullname` = `kebun`.`regional`
+ LIMIT 15', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `regional`.`fullname`, `lokasi`, `luas_ha`, `pn`, `mn`, `jumlah`, `keterangan`
+FROM `kebun`
+JOIN `regional` ON `regional`.`fullname` = `kebun`.`regional`
+ LIMIT 15')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `regional`.`fullname`, `lokasi`, `luas_ha`, `pn`, `mn`, `jumlah`, `keterangan`
+FROM `kebun`
+JOIN `regional` ON `regional`.`fullname` = `kebun`.`regional`
+ LIMIT 15')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `regional`.`fullname`, `lokasi`, `luas_ha`, `pn`, `mn`, `jumlah`, `keterangan`
+FROM `kebun`
+JOIN `regional` ON `regional`.`fullname` = `kebun`.`regional`
+ LIMIT 15', [], false)
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 6 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+ 7 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(176): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 8 APPPATH\Controllers\Kebun.php(41): Hermawan\DataTables\DataTable->toJson()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kebun->tebel()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kebun))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+INFO - 2024-08-30 14:50:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-30 14:53:11 --> ErrorException: Cannot declare class App\Controllers\OffFarm\Dashboard, because the name is already in use
+[Method: GET, Route: dashboard]
+in APPPATH\Controllers\Dashboard.php on line 8.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-08-30 14:53:13 --> ErrorException: Cannot declare class App\Controllers\OffFarm\Dashboard, because the name is already in use
+[Method: GET, Route: dashboard]
+in APPPATH\Controllers\Dashboard.php on line 8.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-08-30 14:53:13 --> ErrorException: Cannot declare class App\Controllers\OffFarm\Dashboard, because the name is already in use
+[Method: GET, Route: dashboard]
+in APPPATH\Controllers\Dashboard.php on line 8.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-08-30 14:53:14 --> ErrorException: Cannot declare class App\Controllers\OffFarm\Dashboard, because the name is already in use
+[Method: GET, Route: dashboard]
+in APPPATH\Controllers\Dashboard.php on line 8.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-08-30 14:53:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-30 15:22:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-30 17:13:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

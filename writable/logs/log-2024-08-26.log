@@ -1,0 +1,446 @@
+CRITICAL - 2024-08-26 09:01:00 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "page.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(81): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('page.php')
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\Common.php(35): Michalsn\CodeIgniterHtmx\View\View->render('page', [...], true)
+ 3 APPPATH\Controllers\Home.php(9): view_fragment('page', 'example', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-26 09:02:08 --> TypeError: view(): Argument #2 ($data) must be of type array, string given, called in C:\laragon\www\ci4monica\app\Controllers\Home.php on line 9
+[Method: GET, Route: /]
+in SYSTEMPATH\Common.php on line 1157.
+ 1 APPPATH\Controllers\Home.php(9): view('welcome_message', 'example', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-26 10:21:37 --> Error: Class "App\Libraries\Recaptcha" not found
+[Method: GET, Route: login]
+in APPPATH\Controllers\Login.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Login->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+WARNING - 2024-08-26 10:24:08 --> [DEPRECATED] Creation of dynamic property App\Libraries\Recaptcha::$settings is deprecated in APPPATH\Libraries\Recaptcha.php on line 29.
+ 1 APPPATH\Controllers\Login.php(16): App\Libraries\Recaptcha->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Login->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+WARNING - 2024-08-26 10:24:08 --> [DEPRECATED] Creation of dynamic property App\Libraries\Recaptcha::$_siteKey is deprecated in APPPATH\Libraries\Recaptcha.php on line 31.
+ 1 APPPATH\Controllers\Login.php(16): App\Libraries\Recaptcha->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Login->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+WARNING - 2024-08-26 10:24:08 --> [DEPRECATED] Creation of dynamic property App\Libraries\Recaptcha::$_secretKey is deprecated in APPPATH\Libraries\Recaptcha.php on line 32.
+ 1 APPPATH\Controllers\Login.php(16): App\Libraries\Recaptcha->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Login->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+WARNING - 2024-08-26 10:24:08 --> [DEPRECATED] Creation of dynamic property App\Libraries\Recaptcha::$_language is deprecated in APPPATH\Libraries\Recaptcha.php on line 33.
+ 1 APPPATH\Controllers\Login.php(16): App\Libraries\Recaptcha->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Login->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-26 11:33:01 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "c;"
+[Method: GET, Route: login/c;]
+in SYSTEMPATH\Router\Router.php on line 737.
+ 1 SYSTEMPATH\Router\Router.php(204): CodeIgniter\Router\Router->checkDisallowedChars('login/c;')
+ 2 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('login/c;')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-26 13:33:59 --> Error: Call to undefined function App\Controllers\view_fragment()
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 9.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-26 14:05:24 --> Error: Call to undefined function App\Controllers\view_fragment()
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 9.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-26 16:32:08 --> ParseError: Unclosed '{' on line 10
+[Method: GET, Route: dashboard]
+in APPPATH\Controllers\Dashboard.php on line 24.
+ 1 SYSTEMPATH\Router\Router.php(563): CodeIgniter\Router\AutoRouter->getRoute('dashboard', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(228): CodeIgniter\Router\Router->autoRoute('dashboard')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('dashboard')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-26 16:35:51 --> TypeError: Michalsn\CodeIgniterHtmx\Config\Services::response(): Argument #1 ($config) must be of type ?Config\App, array given, called in C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Config\BaseService.php on line 312
+[Method: GET, Route: dashboard]
+in VENDORPATH\michalsn\codeigniter-htmx\src\Config\Services.php on line 103.
+ 1 SYSTEMPATH\Config\BaseService.php(312): Michalsn\CodeIgniterHtmx\Config\Services::response([], true)
+ 2 SYSTEMPATH\Common.php(999): CodeIgniter\Config\BaseService::__callStatic('response', [...])
+ 3 APPPATH\Controllers\Dashboard.php(16): service('response', [], true)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-26 16:36:11 --> Error: Call to undefined method Michalsn\CodeIgniterHtmx\HTTP\Response::hxRedirect()
+[Method: GET, Route: dashboard]
+in APPPATH\Controllers\Dashboard.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-26 16:36:28 --> Error: Call to undefined method Michalsn\CodeIgniterHtmx\HTTP\Response::hxRedirect()
+[Method: GET, Route: dashboard]
+in APPPATH\Controllers\Dashboard.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-26 16:36:38 --> Error: Call to undefined method Michalsn\CodeIgniterHtmx\HTTP\Response::hxRedirect()
+[Method: GET, Route: dashboard]
+in APPPATH\Controllers\Dashboard.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-26 16:36:40 --> Error: Call to undefined method Michalsn\CodeIgniterHtmx\HTTP\Response::hxRedirect()
+[Method: GET, Route: dashboard]
+in APPPATH\Controllers\Dashboard.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-26 16:58:37 --> ErrorException: Undefined variable $caption
+[Method: GET, Route: home]
+in APPPATH\Views\welcome_message.php on line 275.
+ 1 APPPATH\Views\welcome_message.php(275): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $caption', 'C:\\laragon\\www\\ci4monica\\app\\Views\\welcome_message.php', 275)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\welcome_message.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('welcome_message', [], true)
+ 5 APPPATH\Controllers\Home.php(9): view('welcome_message')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-26 17:06:15 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "master_app.php"
+[Method: GET, Route: dashboard]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(81): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('master_app.php')
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\Common.php(35): Michalsn\CodeIgniterHtmx\View\View->render('master_app', [...], true)
+ 3 APPPATH\Controllers\Dashboard.php(12): view_fragment('master_app', 'content', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-26 17:06:26 --> ErrorException: Undefined variable $contnet
+[Method: GET, Route: dashboard]
+in APPPATH\Views\layouts\master_app.php on line 819.
+ 1 APPPATH\Views\layouts\master_app.php(819): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $contnet', 'C:\\laragon\\www\\ci4monica\\app\\Views\\layouts\\master_app.php', 819)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\layouts\\master_app.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 VENDORPATH\michalsn\codeigniter-htmx\src\Common.php(35): Michalsn\CodeIgniterHtmx\View\View->render('layouts/master_app', [...], true)
+ 5 APPPATH\Controllers\Dashboard.php(12): view_fragment('layouts/master_app', 'content', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-26 17:06:50 --> ErrorException: Undefined variable $content
+[Method: GET, Route: dashboard]
+in APPPATH\Views\layouts\master_app.php on line 819.
+ 1 APPPATH\Views\layouts\master_app.php(819): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $content', 'C:\\laragon\\www\\ci4monica\\app\\Views\\layouts\\master_app.php', 819)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\layouts\\master_app.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 VENDORPATH\michalsn\codeigniter-htmx\src\Common.php(35): Michalsn\CodeIgniterHtmx\View\View->render('layouts/master_app', [...], true)
+ 5 APPPATH\Controllers\Dashboard.php(12): view_fragment('layouts/master_app', 'content', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-26 17:09:13 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "master_app.php"
+[Method: GET, Route: dashboard]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(81): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('master_app.php')
+ 2 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('master_app', [], true)
+ 3 APPPATH\Controllers\Dashboard.php(11): view('master_app')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-26 17:35:26 --> ErrorException: Undefined variable $tabel
+[Method: GET, Route: users]
+in APPPATH\Views\users.php on line 18.
+ 1 APPPATH\Views\users.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tabel', 'C:\\laragon\\www\\ci4monica\\app\\Views\\users.php', 18)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\users.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('users', [], true)
+ 5 APPPATH\Controllers\Users.php(40): view('users', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Users->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-26 17:35:41 --> ErrorException: Array to string conversion
+[Method: GET, Route: users]
+in APPPATH\Views\users.php on line 18.
+ 1 APPPATH\Views\users.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\laragon\\www\\ci4monica\\app\\Views\\users.php', 18)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\users.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('users', [], true)
+ 5 APPPATH\Controllers\Users.php(40): view('users', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Users->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+ERROR - 2024-08-26 17:38:47 --> mysqli_sql_exception: Unknown column 'email' in 'field list' in C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `id`, `u...', 0)
+#1 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `u...')
+#2 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `u...')
+#3 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `u...', Array, false)
+#4 C:\laragon\www\ci4monica\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(232): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ci4monica\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+#6 C:\laragon\www\ci4monica\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(176): Hermawan\DataTables\DataTableQuery->getDataResult()
+#7 C:\laragon\www\ci4monica\app\Controllers\Users.php(19): Hermawan\DataTables\DataTable->toJson()
+#8 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Users->tebelUser()
+#9 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#10 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\ci4monica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2024-08-26 17:38:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'email' in 'field list'
+[Method: GET, Route: users/tebelUser]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `username`, `email`, `fullname`, `role`
+FROM `users`
+ LIMIT 10', [], false)
+ 2 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+ 4 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(176): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 5 APPPATH\Controllers\Users.php(19): Hermawan\DataTables\DataTable->toJson()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Users->tebelUser()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-26 17:38:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'email' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `username`, `email`, `fullname`, `role`
+FROM `users`
+ LIMIT 10')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `username`, `email`, `fullname`, `role`
+FROM `users`
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `username`, `email`, `fullname`, `role`
+FROM `users`
+ LIMIT 10', [], false)
+ 4 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+ 6 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(176): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 7 APPPATH\Controllers\Users.php(19): Hermawan\DataTables\DataTable->toJson()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Users->tebelUser()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-26 17:38:47 --> [Caused by] mysqli_sql_exception: Unknown column 'email' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `id`, `username`, `email`, `fullname`, `role`
+FROM `users`
+ LIMIT 10', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `username`, `email`, `fullname`, `role`
+FROM `users`
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `username`, `email`, `fullname`, `role`
+FROM `users`
+ LIMIT 10')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `username`, `email`, `fullname`, `role`
+FROM `users`
+ LIMIT 10', [], false)
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 6 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+ 7 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(176): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 8 APPPATH\Controllers\Users.php(19): Hermawan\DataTables\DataTable->toJson()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Users->tebelUser()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+ERROR - 2024-08-26 17:38:56 --> mysqli_sql_exception: Unknown column 'email' in 'field list' in C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `id`, `u...', 0)
+#1 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `u...')
+#2 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `u...')
+#3 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `u...', Array, false)
+#4 C:\laragon\www\ci4monica\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(232): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ci4monica\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+#6 C:\laragon\www\ci4monica\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(176): Hermawan\DataTables\DataTableQuery->getDataResult()
+#7 C:\laragon\www\ci4monica\app\Controllers\Users.php(19): Hermawan\DataTables\DataTable->toJson()
+#8 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Users->tebelUser()
+#9 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#10 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\ci4monica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2024-08-26 17:38:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'email' in 'field list'
+[Method: GET, Route: users/tebelUser]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `username`, `email`, `fullname`, `role`
+FROM `users`
+ LIMIT 10', [], false)
+ 2 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+ 4 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(176): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 5 APPPATH\Controllers\Users.php(19): Hermawan\DataTables\DataTable->toJson()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Users->tebelUser()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-26 17:38:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'email' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `username`, `email`, `fullname`, `role`
+FROM `users`
+ LIMIT 10')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `username`, `email`, `fullname`, `role`
+FROM `users`
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `username`, `email`, `fullname`, `role`
+FROM `users`
+ LIMIT 10', [], false)
+ 4 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+ 6 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(176): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 7 APPPATH\Controllers\Users.php(19): Hermawan\DataTables\DataTable->toJson()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Users->tebelUser()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-26 17:38:56 --> [Caused by] mysqli_sql_exception: Unknown column 'email' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `id`, `username`, `email`, `fullname`, `role`
+FROM `users`
+ LIMIT 10', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `username`, `email`, `fullname`, `role`
+FROM `users`
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `username`, `email`, `fullname`, `role`
+FROM `users`
+ LIMIT 10')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `username`, `email`, `fullname`, `role`
+FROM `users`
+ LIMIT 10', [], false)
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 6 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+ 7 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(176): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 8 APPPATH\Controllers\Users.php(19): Hermawan\DataTables\DataTable->toJson()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Users->tebelUser()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-26 17:59:56 --> ErrorException: Undefined variable $thead
+[Method: GET, Route: users]
+in APPPATH\Views\users.php on line 11.
+ 1 APPPATH\Views\users.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $thead', 'C:\\laragon\\www\\ci4monica\\app\\Views\\users.php', 11)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\users.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('users', [], true)
+ 5 APPPATH\Controllers\Users.php(18): view('users', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Users->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')

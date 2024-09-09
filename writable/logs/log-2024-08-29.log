@@ -1,0 +1,1764 @@
+ERROR - 2024-08-29 10:01:27 --> mysqli_sql_exception: Unknown column 'fullname' in 'field list' in C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `id`, `u...', 0)
+#1 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `u...')
+#2 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `u...')
+#3 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `u...', Array, false)
+#4 C:\laragon\www\ci4monica\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(232): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ci4monica\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+#6 C:\laragon\www\ci4monica\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(176): Hermawan\DataTables\DataTableQuery->getDataResult()
+#7 C:\laragon\www\ci4monica\app\Controllers\Users.php(29): Hermawan\DataTables\DataTable->toJson()
+#8 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Users->tebelUser()
+#9 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#10 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\ci4monica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2024-08-29 10:01:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'fullname' in 'field list'
+[Method: GET, Route: users/tebelUser]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `username`, `fullname`, `role`
+FROM `users`
+ LIMIT 15', [], false)
+ 2 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+ 4 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(176): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 5 APPPATH\Controllers\Users.php(29): Hermawan\DataTables\DataTable->toJson()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Users->tebelUser()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 10:01:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'fullname' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `username`, `fullname`, `role`
+FROM `users`
+ LIMIT 15')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `username`, `fullname`, `role`
+FROM `users`
+ LIMIT 15')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `username`, `fullname`, `role`
+FROM `users`
+ LIMIT 15', [], false)
+ 4 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+ 6 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(176): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 7 APPPATH\Controllers\Users.php(29): Hermawan\DataTables\DataTable->toJson()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Users->tebelUser()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 10:01:27 --> [Caused by] mysqli_sql_exception: Unknown column 'fullname' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `id`, `username`, `fullname`, `role`
+FROM `users`
+ LIMIT 15', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `username`, `fullname`, `role`
+FROM `users`
+ LIMIT 15')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `username`, `fullname`, `role`
+FROM `users`
+ LIMIT 15')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `username`, `fullname`, `role`
+FROM `users`
+ LIMIT 15', [], false)
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 6 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+ 7 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(176): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 8 APPPATH\Controllers\Users.php(29): Hermawan\DataTables\DataTable->toJson()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Users->tebelUser()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+ERROR - 2024-08-29 10:01:29 --> mysqli_sql_exception: Unknown column 'fullname' in 'field list' in C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `id`, `u...', 0)
+#1 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `u...')
+#2 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `u...')
+#3 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `u...', Array, false)
+#4 C:\laragon\www\ci4monica\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(232): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ci4monica\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+#6 C:\laragon\www\ci4monica\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(176): Hermawan\DataTables\DataTableQuery->getDataResult()
+#7 C:\laragon\www\ci4monica\app\Controllers\Users.php(29): Hermawan\DataTables\DataTable->toJson()
+#8 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Users->tebelUser()
+#9 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#10 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\ci4monica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2024-08-29 10:01:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'fullname' in 'field list'
+[Method: GET, Route: users/tebelUser]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `username`, `fullname`, `role`
+FROM `users`
+ LIMIT 15', [], false)
+ 2 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+ 4 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(176): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 5 APPPATH\Controllers\Users.php(29): Hermawan\DataTables\DataTable->toJson()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Users->tebelUser()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 10:01:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'fullname' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `username`, `fullname`, `role`
+FROM `users`
+ LIMIT 15')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `username`, `fullname`, `role`
+FROM `users`
+ LIMIT 15')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `username`, `fullname`, `role`
+FROM `users`
+ LIMIT 15', [], false)
+ 4 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+ 6 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(176): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 7 APPPATH\Controllers\Users.php(29): Hermawan\DataTables\DataTable->toJson()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Users->tebelUser()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 10:01:29 --> [Caused by] mysqli_sql_exception: Unknown column 'fullname' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `id`, `username`, `fullname`, `role`
+FROM `users`
+ LIMIT 15', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `username`, `fullname`, `role`
+FROM `users`
+ LIMIT 15')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `username`, `fullname`, `role`
+FROM `users`
+ LIMIT 15')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `username`, `fullname`, `role`
+FROM `users`
+ LIMIT 15', [], false)
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 6 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+ 7 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(176): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 8 APPPATH\Controllers\Users.php(29): Hermawan\DataTables\DataTable->toJson()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Users->tebelUser()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+ERROR - 2024-08-29 10:03:55 --> mysqli_sql_exception: Unknown column 'fullname' in 'field list' in C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `id`, `u...', 0)
+#1 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `u...')
+#2 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `u...')
+#3 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `u...', Array, false)
+#4 C:\laragon\www\ci4monica\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(232): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ci4monica\vendor\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+#6 C:\laragon\www\ci4monica\vendor\hermawan\codeigniter4-datatables\src\DataTable.php(176): Hermawan\DataTables\DataTableQuery->getDataResult()
+#7 C:\laragon\www\ci4monica\app\Controllers\Users.php(29): Hermawan\DataTables\DataTable->toJson()
+#8 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Users->tebelUser()
+#9 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#10 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\ci4monica\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\ci4monica\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2024-08-29 10:03:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'fullname' in 'field list'
+[Method: GET, Route: users/tebelUser]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `username`, `fullname`, `role`
+FROM `users`
+ LIMIT 15', [], false)
+ 2 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 3 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+ 4 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(176): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 5 APPPATH\Controllers\Users.php(29): Hermawan\DataTables\DataTable->toJson()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Users->tebelUser()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 10:03:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'fullname' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `username`, `fullname`, `role`
+FROM `users`
+ LIMIT 15')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `username`, `fullname`, `role`
+FROM `users`
+ LIMIT 15')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `username`, `fullname`, `role`
+FROM `users`
+ LIMIT 15', [], false)
+ 4 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+ 6 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(176): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 7 APPPATH\Controllers\Users.php(29): Hermawan\DataTables\DataTable->toJson()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Users->tebelUser()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 10:03:55 --> [Caused by] mysqli_sql_exception: Unknown column 'fullname' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `id`, `username`, `fullname`, `role`
+FROM `users`
+ LIMIT 15', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id`, `username`, `fullname`, `role`
+FROM `users`
+ LIMIT 15')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id`, `username`, `fullname`, `role`
+FROM `users`
+ LIMIT 15')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `id`, `username`, `fullname`, `role`
+FROM `users`
+ LIMIT 15', [], false)
+ 5 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 6 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTableQuery.php(70): Hermawan\DataTables\DataTableQuery->queryResult()
+ 7 VENDORPATH\hermawan\codeigniter4-datatables\src\DataTable.php(176): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 8 APPPATH\Controllers\Users.php(29): Hermawan\DataTables\DataTable->toJson()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Users->tebelUser()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 10:44:46 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "progress_lapangan/form.php"
+[Method: GET, Route: ProgressLapangan/add]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(81): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('progress_lapangan/form.php')
+ 2 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('progress_lapangan/form', [], true)
+ 3 APPPATH\Controllers\ProgressLapangan.php(38): view('progress_lapangan/form')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProgressLapangan->add()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProgressLapangan))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:03:57 --> ErrorException: Attempt to read property "Kode" on array
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 71.
+ 1 APPPATH\Controllers\Awal.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "Kode" on array', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Awal.php', 71)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:03:57 --> ErrorException: Attempt to read property "Kode" on array
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 71.
+ 1 APPPATH\Controllers\Awal.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "Kode" on array', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Awal.php', 71)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:03:57 --> ErrorException: Attempt to read property "Kode" on array
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 71.
+ 1 APPPATH\Controllers\Awal.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "Kode" on array', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Awal.php', 71)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:03:57 --> ErrorException: Attempt to read property "Kode" on array
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 71.
+ 1 APPPATH\Controllers\Awal.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "Kode" on array', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Awal.php', 71)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:03:57 --> ErrorException: Attempt to read property "Kode" on array
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 71.
+ 1 APPPATH\Controllers\Awal.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "Kode" on array', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Awal.php', 71)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:03:57 --> ErrorException: Attempt to read property "Kode" on array
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 71.
+ 1 APPPATH\Controllers\Awal.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "Kode" on array', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Awal.php', 71)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:03:57 --> ErrorException: Attempt to read property "Kode" on array
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 71.
+ 1 APPPATH\Controllers\Awal.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "Kode" on array', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Awal.php', 71)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:03:58 --> ErrorException: Attempt to read property "Kode" on array
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 71.
+ 1 APPPATH\Controllers\Awal.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "Kode" on array', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Awal.php', 71)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:03:58 --> ErrorException: Attempt to read property "Kode" on array
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 71.
+ 1 APPPATH\Controllers\Awal.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "Kode" on array', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Awal.php', 71)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:03:58 --> ErrorException: Attempt to read property "Kode" on array
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 71.
+ 1 APPPATH\Controllers\Awal.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "Kode" on array', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Awal.php', 71)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:05:59 --> ErrorException: Attempt to read property "Kode" on array
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 71.
+ 1 APPPATH\Controllers\Awal.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "Kode" on array', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Awal.php', 71)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:05:59 --> ErrorException: Attempt to read property "Kode" on array
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 71.
+ 1 APPPATH\Controllers\Awal.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "Kode" on array', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Awal.php', 71)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:06:00 --> ErrorException: Attempt to read property "Kode" on array
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 71.
+ 1 APPPATH\Controllers\Awal.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "Kode" on array', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Awal.php', 71)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:06:00 --> ErrorException: Attempt to read property "Kode" on array
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 71.
+ 1 APPPATH\Controllers\Awal.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "Kode" on array', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Awal.php', 71)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:06:00 --> ErrorException: Attempt to read property "Kode" on array
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 71.
+ 1 APPPATH\Controllers\Awal.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "Kode" on array', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Awal.php', 71)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:06:00 --> ErrorException: Attempt to read property "Kode" on array
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 71.
+ 1 APPPATH\Controllers\Awal.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "Kode" on array', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Awal.php', 71)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:06:00 --> ErrorException: Attempt to read property "Kode" on array
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 71.
+ 1 APPPATH\Controllers\Awal.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "Kode" on array', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Awal.php', 71)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:06:00 --> ErrorException: Attempt to read property "Kode" on array
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 71.
+ 1 APPPATH\Controllers\Awal.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "Kode" on array', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Awal.php', 71)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:06:00 --> ErrorException: Attempt to read property "Kode" on array
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 71.
+ 1 APPPATH\Controllers\Awal.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "Kode" on array', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Awal.php', 71)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:06:01 --> ErrorException: Attempt to read property "Kode" on array
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 71.
+ 1 APPPATH\Controllers\Awal.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "Kode" on array', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\Awal.php', 71)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:14:46 --> Error: Call to undefined function App\Controllers\pcntl_fork()
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 80.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:14:46 --> Error: Call to undefined function App\Controllers\pcntl_fork()
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 80.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:14:46 --> Error: Call to undefined function App\Controllers\pcntl_fork()
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 80.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:14:46 --> Error: Call to undefined function App\Controllers\pcntl_fork()
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 80.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:14:47 --> Error: Call to undefined function App\Controllers\pcntl_fork()
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 80.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:14:47 --> Error: Call to undefined function App\Controllers\pcntl_fork()
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 80.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:14:47 --> Error: Call to undefined function App\Controllers\pcntl_fork()
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 80.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:14:47 --> Error: Call to undefined function App\Controllers\pcntl_fork()
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 80.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:14:47 --> Error: Call to undefined function App\Controllers\pcntl_fork()
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 80.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:14:47 --> Error: Call to undefined function App\Controllers\pcntl_fork()
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 80.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:18:29 --> TypeError: json_decode(): Argument #1 ($json) must be of type string, array given
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 67.
+ 1 APPPATH\Controllers\Awal.php(67): json_decode([...], true)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:18:29 --> TypeError: json_decode(): Argument #1 ($json) must be of type string, array given
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 67.
+ 1 APPPATH\Controllers\Awal.php(67): json_decode([...], true)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:18:29 --> TypeError: json_decode(): Argument #1 ($json) must be of type string, array given
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 67.
+ 1 APPPATH\Controllers\Awal.php(67): json_decode([...], true)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:18:29 --> TypeError: json_decode(): Argument #1 ($json) must be of type string, array given
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 67.
+ 1 APPPATH\Controllers\Awal.php(67): json_decode([...], true)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:18:30 --> TypeError: json_decode(): Argument #1 ($json) must be of type string, array given
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 67.
+ 1 APPPATH\Controllers\Awal.php(67): json_decode([...], true)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:18:30 --> TypeError: json_decode(): Argument #1 ($json) must be of type string, array given
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 67.
+ 1 APPPATH\Controllers\Awal.php(67): json_decode([...], true)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:18:30 --> TypeError: json_decode(): Argument #1 ($json) must be of type string, array given
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 67.
+ 1 APPPATH\Controllers\Awal.php(67): json_decode([...], true)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:18:30 --> TypeError: json_decode(): Argument #1 ($json) must be of type string, array given
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 67.
+ 1 APPPATH\Controllers\Awal.php(67): json_decode([...], true)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:18:30 --> TypeError: json_decode(): Argument #1 ($json) must be of type string, array given
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 67.
+ 1 APPPATH\Controllers\Awal.php(67): json_decode([...], true)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:18:30 --> TypeError: json_decode(): Argument #1 ($json) must be of type string, array given
+[Method: POST, Route: Awal/do_upload]
+in APPPATH\Controllers\Awal.php on line 67.
+ 1 APPPATH\Controllers\Awal.php(67): json_decode([...], true)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:21:39 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: Awal/do_upload]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\Awal.php(57): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:21:39 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: Awal/do_upload]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\Awal.php(57): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:21:39 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: Awal/do_upload]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\Awal.php(57): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:21:40 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: Awal/do_upload]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\Awal.php(57): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:21:40 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: Awal/do_upload]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\Awal.php(57): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:21:40 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: Awal/do_upload]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\Awal.php(57): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:21:40 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: Awal/do_upload]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\Awal.php(57): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:21:40 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: Awal/do_upload]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\Awal.php(57): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:21:40 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: Awal/do_upload]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\Awal.php(57): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:21:40 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: Awal/do_upload]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\Awal.php(57): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:22:01 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: Awal/do_upload]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\Awal.php(57): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:22:01 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: Awal/do_upload]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\Awal.php(57): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:22:02 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: Awal/do_upload]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\Awal.php(57): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:22:02 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: Awal/do_upload]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\Awal.php(57): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:22:02 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: Awal/do_upload]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\Awal.php(57): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:22:02 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: Awal/do_upload]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\Awal.php(57): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:22:02 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: Awal/do_upload]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\Awal.php(57): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:22:02 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: Awal/do_upload]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\Awal.php(57): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:22:03 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: Awal/do_upload]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\Awal.php(57): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 11:22:03 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: Awal/do_upload]
+in SYSTEMPATH\HTTP\IncomingRequest.php on line 537.
+ 1 SYSTEMPATH\HTTP\IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON('Syntax error')
+ 2 APPPATH\Controllers\Awal.php(57): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Awal->do_upload()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Awal))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 13:00:39 --> Error: Class "App\Models\SumberIpsModel" not found
+[Method: POST, Route: SumberIps/do_upload]
+in APPPATH\Controllers\SumberIps.php on line 67.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SumberIps->do_upload()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SumberIps))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 13:00:39 --> Error: Class "App\Models\SumberIpsModel" not found
+[Method: POST, Route: SumberIps/do_upload]
+in APPPATH\Controllers\SumberIps.php on line 67.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SumberIps->do_upload()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SumberIps))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 13:00:40 --> Error: Class "App\Models\SumberIpsModel" not found
+[Method: POST, Route: SumberIps/do_upload]
+in APPPATH\Controllers\SumberIps.php on line 67.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SumberIps->do_upload()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SumberIps))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 13:00:40 --> Error: Class "App\Models\SumberIpsModel" not found
+[Method: POST, Route: SumberIps/do_upload]
+in APPPATH\Controllers\SumberIps.php on line 67.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SumberIps->do_upload()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SumberIps))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 13:00:40 --> Error: Class "App\Models\SumberIpsModel" not found
+[Method: POST, Route: SumberIps/do_upload]
+in APPPATH\Controllers\SumberIps.php on line 67.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SumberIps->do_upload()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SumberIps))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 13:00:40 --> Error: Class "App\Models\SumberIpsModel" not found
+[Method: POST, Route: SumberIps/do_upload]
+in APPPATH\Controllers\SumberIps.php on line 67.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SumberIps->do_upload()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SumberIps))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 13:00:40 --> Error: Class "App\Models\SumberIpsModel" not found
+[Method: POST, Route: SumberIps/do_upload]
+in APPPATH\Controllers\SumberIps.php on line 67.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SumberIps->do_upload()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SumberIps))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 13:00:40 --> Error: Class "App\Models\SumberIpsModel" not found
+[Method: POST, Route: SumberIps/do_upload]
+in APPPATH\Controllers\SumberIps.php on line 67.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SumberIps->do_upload()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SumberIps))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 13:00:40 --> Error: Class "App\Models\SumberIpsModel" not found
+[Method: POST, Route: SumberIps/do_upload]
+in APPPATH\Controllers\SumberIps.php on line 67.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SumberIps->do_upload()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SumberIps))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 13:00:40 --> Error: Class "App\Models\SumberIpsModel" not found
+[Method: POST, Route: SumberIps/do_upload]
+in APPPATH\Controllers\SumberIps.php on line 67.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SumberIps->do_upload()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SumberIps))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 13:00:46 --> Error: Class "App\Models\SumberIpsModel" not found
+[Method: POST, Route: SumberIps/do_upload]
+in APPPATH\Controllers\SumberIps.php on line 67.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SumberIps->do_upload()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SumberIps))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 13:00:46 --> Error: Class "App\Models\SumberIpsModel" not found
+[Method: POST, Route: SumberIps/do_upload]
+in APPPATH\Controllers\SumberIps.php on line 67.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SumberIps->do_upload()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SumberIps))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 13:00:46 --> Error: Class "App\Models\SumberIpsModel" not found
+[Method: POST, Route: SumberIps/do_upload]
+in APPPATH\Controllers\SumberIps.php on line 67.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SumberIps->do_upload()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SumberIps))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 13:00:46 --> Error: Class "App\Models\SumberIpsModel" not found
+[Method: POST, Route: SumberIps/do_upload]
+in APPPATH\Controllers\SumberIps.php on line 67.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SumberIps->do_upload()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SumberIps))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 13:00:46 --> Error: Class "App\Models\SumberIpsModel" not found
+[Method: POST, Route: SumberIps/do_upload]
+in APPPATH\Controllers\SumberIps.php on line 67.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SumberIps->do_upload()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SumberIps))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 13:00:46 --> Error: Class "App\Models\SumberIpsModel" not found
+[Method: POST, Route: SumberIps/do_upload]
+in APPPATH\Controllers\SumberIps.php on line 67.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SumberIps->do_upload()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SumberIps))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 13:00:46 --> Error: Class "App\Models\SumberIpsModel" not found
+[Method: POST, Route: SumberIps/do_upload]
+in APPPATH\Controllers\SumberIps.php on line 67.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SumberIps->do_upload()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SumberIps))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 13:00:47 --> Error: Class "App\Models\SumberIpsModel" not found
+[Method: POST, Route: SumberIps/do_upload]
+in APPPATH\Controllers\SumberIps.php on line 67.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SumberIps->do_upload()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SumberIps))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 13:00:47 --> Error: Class "App\Models\SumberIpsModel" not found
+[Method: POST, Route: SumberIps/do_upload]
+in APPPATH\Controllers\SumberIps.php on line 67.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SumberIps->do_upload()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SumberIps))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 13:00:47 --> Error: Class "App\Models\SumberIpsModel" not found
+[Method: POST, Route: SumberIps/do_upload]
+in APPPATH\Controllers\SumberIps.php on line 67.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SumberIps->do_upload()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SumberIps))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 13:01:00 --> ErrorException: Undefined array key 5
+[Method: POST, Route: SumberIps/do_upload]
+in APPPATH\Controllers\SumberIps.php on line 77.
+ 1 APPPATH\Controllers\SumberIps.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 5', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\SumberIps.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SumberIps->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SumberIps))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 13:01:00 --> ErrorException: Undefined array key 5
+[Method: POST, Route: SumberIps/do_upload]
+in APPPATH\Controllers\SumberIps.php on line 77.
+ 1 APPPATH\Controllers\SumberIps.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 5', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\SumberIps.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SumberIps->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SumberIps))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 13:01:00 --> ErrorException: Undefined array key 5
+[Method: POST, Route: SumberIps/do_upload]
+in APPPATH\Controllers\SumberIps.php on line 77.
+ 1 APPPATH\Controllers\SumberIps.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 5', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\SumberIps.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SumberIps->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SumberIps))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 13:01:00 --> ErrorException: Undefined array key 5
+[Method: POST, Route: SumberIps/do_upload]
+in APPPATH\Controllers\SumberIps.php on line 77.
+ 1 APPPATH\Controllers\SumberIps.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 5', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\SumberIps.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SumberIps->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SumberIps))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 13:01:00 --> ErrorException: Undefined array key 5
+[Method: POST, Route: SumberIps/do_upload]
+in APPPATH\Controllers\SumberIps.php on line 77.
+ 1 APPPATH\Controllers\SumberIps.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 5', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\SumberIps.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SumberIps->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SumberIps))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 13:01:00 --> ErrorException: Undefined array key 5
+[Method: POST, Route: SumberIps/do_upload]
+in APPPATH\Controllers\SumberIps.php on line 77.
+ 1 APPPATH\Controllers\SumberIps.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 5', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\SumberIps.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SumberIps->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SumberIps))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 13:01:00 --> ErrorException: Undefined array key 5
+[Method: POST, Route: SumberIps/do_upload]
+in APPPATH\Controllers\SumberIps.php on line 77.
+ 1 APPPATH\Controllers\SumberIps.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 5', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\SumberIps.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SumberIps->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SumberIps))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 13:01:00 --> ErrorException: Undefined array key 5
+[Method: POST, Route: SumberIps/do_upload]
+in APPPATH\Controllers\SumberIps.php on line 77.
+ 1 APPPATH\Controllers\SumberIps.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 5', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\SumberIps.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SumberIps->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SumberIps))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 13:01:01 --> ErrorException: Undefined array key 5
+[Method: POST, Route: SumberIps/do_upload]
+in APPPATH\Controllers\SumberIps.php on line 77.
+ 1 APPPATH\Controllers\SumberIps.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 5', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\SumberIps.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SumberIps->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SumberIps))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 13:01:01 --> ErrorException: Undefined array key 5
+[Method: POST, Route: SumberIps/do_upload]
+in APPPATH\Controllers\SumberIps.php on line 77.
+ 1 APPPATH\Controllers\SumberIps.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 5', 'C:\\laragon\\www\\ci4monica\\app\\Controllers\\SumberIps.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SumberIps->do_upload()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SumberIps))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 13:18:53 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "progress_lapangan/form.php"
+[Method: GET, Route: ProgressLapangan/add]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(81): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('progress_lapangan/form.php')
+ 2 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('progress_lapangan/form', [], true)
+ 3 APPPATH\Controllers\ProgressLapangan.php(38): view('progress_lapangan/form')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ProgressLapangan->add()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProgressLapangan))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 14:12:24 --> ErrorException: Undefined variable $p_pks
+[Method: GET, Route: dashboard]
+in APPPATH\Views\dashboard.php on line 28.
+ 1 APPPATH\Views\dashboard.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $p_pks', 'C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php', 28)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\BaseController.php(111): view('dashboard', [...])
+ 6 APPPATH\Controllers\Dashboard.php(21): App\Controllers\BaseController->getView([...], Object(Michalsn\CodeIgniterHtmx\HTTP\IncomingRequest), 'dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 14:12:25 --> ErrorException: Undefined variable $p_pks
+[Method: GET, Route: dashboard]
+in APPPATH\Views\dashboard.php on line 28.
+ 1 APPPATH\Views\dashboard.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $p_pks', 'C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php', 28)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\BaseController.php(111): view('dashboard', [...])
+ 6 APPPATH\Controllers\Dashboard.php(21): App\Controllers\BaseController->getView([...], Object(Michalsn\CodeIgniterHtmx\HTTP\IncomingRequest), 'dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 14:12:26 --> ErrorException: Undefined variable $p_pks
+[Method: GET, Route: dashboard]
+in APPPATH\Views\dashboard.php on line 28.
+ 1 APPPATH\Views\dashboard.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $p_pks', 'C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php', 28)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\BaseController.php(111): view('dashboard', [...])
+ 6 APPPATH\Controllers\Dashboard.php(21): App\Controllers\BaseController->getView([...], Object(Michalsn\CodeIgniterHtmx\HTTP\IncomingRequest), 'dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 14:12:28 --> ErrorException: Undefined variable $p_pks
+[Method: GET, Route: /]
+in APPPATH\Views\dashboard.php on line 28.
+ 1 APPPATH\Views\dashboard.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $p_pks', 'C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php', 28)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\BaseController.php(111): view('dashboard', [...])
+ 6 APPPATH\Controllers\Home.php(14): App\Controllers\BaseController->getView([...], Object(Michalsn\CodeIgniterHtmx\HTTP\IncomingRequest), 'dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 14:12:29 --> ErrorException: Undefined variable $p_pks
+[Method: GET, Route: /]
+in APPPATH\Views\dashboard.php on line 28.
+ 1 APPPATH\Views\dashboard.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $p_pks', 'C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php', 28)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\BaseController.php(111): view('dashboard', [...])
+ 6 APPPATH\Controllers\Home.php(14): App\Controllers\BaseController->getView([...], Object(Michalsn\CodeIgniterHtmx\HTTP\IncomingRequest), 'dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 14:37:55 --> ErrorException: Undefined variable $p_pks
+[Method: GET, Route: /]
+in APPPATH\Views\dashboard.php on line 28.
+ 1 APPPATH\Views\dashboard.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $p_pks', 'C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php', 28)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\BaseController.php(111): view('dashboard', [...])
+ 6 APPPATH\Controllers\Home.php(14): App\Controllers\BaseController->getView([...], Object(Michalsn\CodeIgniterHtmx\HTTP\IncomingRequest), 'dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 14:53:23 --> ErrorException: Undefined variable $p_pks
+[Method: GET, Route: /]
+in APPPATH\Views\dashboard.php on line 28.
+ 1 APPPATH\Views\dashboard.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $p_pks', 'C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php', 28)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\BaseController.php(111): view('dashboard', [...])
+ 6 APPPATH\Controllers\Home.php(14): App\Controllers\BaseController->getView([...], Object(Michalsn\CodeIgniterHtmx\HTTP\IncomingRequest), 'dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 14:53:37 --> ErrorException: Undefined variable $p_pks
+[Method: GET, Route: /]
+in APPPATH\Views\dashboard.php on line 28.
+ 1 APPPATH\Views\dashboard.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $p_pks', 'C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php', 28)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\BaseController.php(111): view('dashboard', [...])
+ 6 APPPATH\Controllers\Home.php(14): App\Controllers\BaseController->getView([...], Object(Michalsn\CodeIgniterHtmx\HTTP\IncomingRequest), 'dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 14:55:01 --> ErrorException: Undefined variable $p_pks
+[Method: GET, Route: /]
+in APPPATH\Views\dashboard.php on line 28.
+ 1 APPPATH\Views\dashboard.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $p_pks', 'C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php', 28)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\BaseController.php(111): view('dashboard', [...])
+ 6 APPPATH\Controllers\Home.php(14): App\Controllers\BaseController->getView([...], Object(Michalsn\CodeIgniterHtmx\HTTP\IncomingRequest), 'dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 14:55:03 --> ErrorException: Undefined variable $p_pks
+[Method: GET, Route: /]
+in APPPATH\Views\dashboard.php on line 28.
+ 1 APPPATH\Views\dashboard.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $p_pks', 'C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php', 28)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\BaseController.php(111): view('dashboard', [...])
+ 6 APPPATH\Controllers\Home.php(14): App\Controllers\BaseController->getView([...], Object(Michalsn\CodeIgniterHtmx\HTTP\IncomingRequest), 'dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 14:55:04 --> ErrorException: Undefined variable $p_pks
+[Method: GET, Route: /]
+in APPPATH\Views\dashboard.php on line 28.
+ 1 APPPATH\Views\dashboard.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $p_pks', 'C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php', 28)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\BaseController.php(111): view('dashboard', [...])
+ 6 APPPATH\Controllers\Home.php(14): App\Controllers\BaseController->getView([...], Object(Michalsn\CodeIgniterHtmx\HTTP\IncomingRequest), 'dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 14:56:12 --> ErrorException: Undefined variable $p_pks
+[Method: GET, Route: /]
+in APPPATH\Views\dashboard.php on line 28.
+ 1 APPPATH\Views\dashboard.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $p_pks', 'C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php', 28)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\BaseController.php(112): view('dashboard', [...])
+ 6 APPPATH\Controllers\Home.php(14): App\Controllers\BaseController->getView([...], Object(Michalsn\CodeIgniterHtmx\HTTP\IncomingRequest), 'dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 14:56:30 --> ErrorException: Undefined variable $p_pks
+[Method: GET, Route: /]
+in APPPATH\Views\dashboard.php on line 28.
+ 1 APPPATH\Views\dashboard.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $p_pks', 'C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php', 28)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\BaseController.php(112): view('dashboard', [...])
+ 6 APPPATH\Controllers\Home.php(14): App\Controllers\BaseController->getView([...], Object(Michalsn\CodeIgniterHtmx\HTTP\IncomingRequest), 'dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 14:57:42 --> ErrorException: Undefined variable $p_pks
+[Method: GET, Route: /]
+in APPPATH\Views\dashboard.php on line 28.
+ 1 APPPATH\Views\dashboard.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $p_pks', 'C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php', 28)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\BaseController.php(116): view('dashboard', [...])
+ 6 APPPATH\Controllers\Home.php(14): App\Controllers\BaseController->getView([...], Object(Michalsn\CodeIgniterHtmx\HTTP\IncomingRequest), 'dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 14:58:57 --> ErrorException: Undefined variable $p_pks
+[Method: GET, Route: /]
+in APPPATH\Views\dashboard.php on line 28.
+ 1 APPPATH\Views\dashboard.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $p_pks', 'C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php', 28)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\BaseController.php(116): view('dashboard', [...])
+ 6 APPPATH\Controllers\Home.php(14): App\Controllers\BaseController->getView([...], Object(Michalsn\CodeIgniterHtmx\HTTP\IncomingRequest), 'dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 15:01:31 --> ErrorException: Undefined variable $title_web
+[Method: GET, Route: /]
+in APPPATH\Views\dashboard.php on line 1.
+ 1 APPPATH\Views\dashboard.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title_web', 'C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php', 1)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\BaseController.php(113): view('dashboard', [...])
+ 6 APPPATH\Controllers\Home.php(14): App\Controllers\BaseController->getView([...], Object(Michalsn\CodeIgniterHtmx\HTTP\IncomingRequest), 'dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 15:01:42 --> ErrorException: Undefined variable $p_pks
+[Method: GET, Route: /]
+in APPPATH\Views\dashboard.php on line 28.
+ 1 APPPATH\Views\dashboard.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $p_pks', 'C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php', 28)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\BaseController.php(113): view('dashboard', [...])
+ 6 APPPATH\Controllers\Home.php(14): App\Controllers\BaseController->getView([...], Object(Michalsn\CodeIgniterHtmx\HTTP\IncomingRequest), 'dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 15:01:44 --> ErrorException: Undefined variable $p_pks
+[Method: GET, Route: /]
+in APPPATH\Views\dashboard.php on line 28.
+ 1 APPPATH\Views\dashboard.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $p_pks', 'C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php', 28)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\BaseController.php(113): view('dashboard', [...])
+ 6 APPPATH\Controllers\Home.php(14): App\Controllers\BaseController->getView([...], Object(Michalsn\CodeIgniterHtmx\HTTP\IncomingRequest), 'dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 15:02:46 --> ErrorException: Undefined variable $p_tekpol
+[Method: GET, Route: dashboard]
+in APPPATH\Views\dashboard.php on line 41.
+ 1 APPPATH\Views\dashboard.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $p_tekpol', 'C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php', 41)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\BaseController.php(113): view('dashboard', [...])
+ 6 APPPATH\Controllers\Dashboard.php(21): App\Controllers\BaseController->getView([...], Object(Michalsn\CodeIgniterHtmx\HTTP\IncomingRequest), 'dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 15:02:47 --> ErrorException: Undefined variable $p_tekpol
+[Method: GET, Route: dashboard]
+in APPPATH\Views\dashboard.php on line 41.
+ 1 APPPATH\Views\dashboard.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $p_tekpol', 'C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php', 41)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\BaseController.php(113): view('dashboard', [...])
+ 6 APPPATH\Controllers\Dashboard.php(21): App\Controllers\BaseController->getView([...], Object(Michalsn\CodeIgniterHtmx\HTTP\IncomingRequest), 'dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 15:02:51 --> ErrorException: Undefined variable $p_tekpol
+[Method: GET, Route: dashboard]
+in APPPATH\Views\dashboard.php on line 41.
+ 1 APPPATH\Views\dashboard.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $p_tekpol', 'C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php', 41)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\BaseController.php(113): view('dashboard', [...])
+ 6 APPPATH\Controllers\Dashboard.php(21): App\Controllers\BaseController->getView([...], Object(Michalsn\CodeIgniterHtmx\HTTP\IncomingRequest), 'dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 15:02:55 --> ErrorException: Undefined variable $p_tekpol
+[Method: GET, Route: dashboard]
+in APPPATH\Views\dashboard.php on line 41.
+ 1 APPPATH\Views\dashboard.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $p_tekpol', 'C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php', 41)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\BaseController.php(113): view('dashboard', [...])
+ 6 APPPATH\Controllers\Dashboard.php(21): App\Controllers\BaseController->getView([...], Object(Michalsn\CodeIgniterHtmx\HTTP\IncomingRequest), 'dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 15:03:57 --> ErrorException: Undefined variable $p_tekpol
+[Method: GET, Route: dashboard]
+in APPPATH\Views\dashboard.php on line 41.
+ 1 APPPATH\Views\dashboard.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $p_tekpol', 'C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php', 41)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\BaseController.php(113): view('dashboard', [...])
+ 6 APPPATH\Controllers\Dashboard.php(21): App\Controllers\BaseController->getView([...], Object(Michalsn\CodeIgniterHtmx\HTTP\IncomingRequest), 'dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 15:04:00 --> ErrorException: Undefined variable $p_pks
+[Method: GET, Route: /]
+in APPPATH\Views\dashboard.php on line 28.
+ 1 APPPATH\Views\dashboard.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $p_pks', 'C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php', 28)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\BaseController.php(116): view('dashboard', [...])
+ 6 APPPATH\Controllers\Home.php(14): App\Controllers\BaseController->getView([...], Object(Michalsn\CodeIgniterHtmx\HTTP\IncomingRequest), 'dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 15:04:00 --> ErrorException: Undefined variable $p_pks
+[Method: GET, Route: /]
+in APPPATH\Views\dashboard.php on line 28.
+ 1 APPPATH\Views\dashboard.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $p_pks', 'C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php', 28)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\BaseController.php(116): view('dashboard', [...])
+ 6 APPPATH\Controllers\Home.php(14): App\Controllers\BaseController->getView([...], Object(Michalsn\CodeIgniterHtmx\HTTP\IncomingRequest), 'dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 15:04:25 --> ErrorException: Undefined variable $p_pks
+[Method: GET, Route: /]
+in APPPATH\Views\dashboard.php on line 28.
+ 1 APPPATH\Views\dashboard.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $p_pks', 'C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php', 28)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\BaseController.php(116): view('dashboard', [...])
+ 6 APPPATH\Controllers\Home.php(14): App\Controllers\BaseController->getView([...], Object(Michalsn\CodeIgniterHtmx\HTTP\IncomingRequest), 'dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 15:04:27 --> ErrorException: Undefined variable $p_pks
+[Method: GET, Route: /]
+in APPPATH\Views\dashboard.php on line 28.
+ 1 APPPATH\Views\dashboard.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $p_pks', 'C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php', 28)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\BaseController.php(116): view('dashboard', [...])
+ 6 APPPATH\Controllers\Home.php(14): App\Controllers\BaseController->getView([...], Object(Michalsn\CodeIgniterHtmx\HTTP\IncomingRequest), 'dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 15:04:29 --> ErrorException: Undefined variable $p_pks
+[Method: GET, Route: /]
+in APPPATH\Views\dashboard.php on line 28.
+ 1 APPPATH\Views\dashboard.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $p_pks', 'C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php', 28)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\BaseController.php(116): view('dashboard', [...])
+ 6 APPPATH\Controllers\Home.php(14): App\Controllers\BaseController->getView([...], Object(Michalsn\CodeIgniterHtmx\HTTP\IncomingRequest), 'dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 15:05:13 --> ErrorException: Undefined variable $content
+[Method: GET, Route: /]
+in APPPATH\Views\dashboard.php on line 28.
+ 1 APPPATH\Views\dashboard.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $content', 'C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php', 28)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\BaseController.php(116): view('dashboard', [...])
+ 6 APPPATH\Controllers\Home.php(14): App\Controllers\BaseController->getView([...], Object(Michalsn\CodeIgniterHtmx\HTTP\IncomingRequest), 'dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 15:05:56 --> ErrorException: Undefined variable $content
+[Method: GET, Route: /]
+in APPPATH\Views\dashboard.php on line 28.
+ 1 APPPATH\Views\dashboard.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $content', 'C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php', 28)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\BaseController.php(111): view('dashboard', [...])
+ 6 APPPATH\Controllers\Dashboard.php(21): App\Controllers\BaseController->getView([...], Object(Michalsn\CodeIgniterHtmx\HTTP\IncomingRequest), 'dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 15:06:05 --> ErrorException: Undefined variable $p_tekpol
+[Method: GET, Route: /]
+in APPPATH\Views\dashboard.php on line 41.
+ 1 APPPATH\Views\dashboard.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $p_tekpol', 'C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php', 41)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\BaseController.php(111): view('dashboard', [...])
+ 6 APPPATH\Controllers\Dashboard.php(21): App\Controllers\BaseController->getView([...], Object(Michalsn\CodeIgniterHtmx\HTTP\IncomingRequest), 'dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
+CRITICAL - 2024-08-29 15:07:59 --> ErrorException: Undefined variable $p_pengadaan
+[Method: GET, Route: /]
+in APPPATH\Views\dashboard.php on line 68.
+ 1 APPPATH\Views\dashboard.php(68): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $p_pengadaan', 'C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php', 68)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('C:\\laragon\\www\\ci4monica\\app\\Views\\dashboard.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard', [], true)
+ 5 APPPATH\Controllers\BaseController.php(111): view('dashboard', [...])
+ 6 APPPATH\Controllers\Dashboard.php(24): App\Controllers\BaseController->getView([...], Object(Michalsn\CodeIgniterHtmx\HTTP\IncomingRequest), 'dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\ci4monica\\public\\index.php')
