@@ -12,10 +12,12 @@
     .card-link .card:hover {
         box-shadow: 2px 1px 10px 2px rgba(23, 155, 174, 0.7);
     }
+
 </style>
 
 <div class="project-page d-flex justify-content-between align-items-center flex-wrap  particles-js-canvas-el">
-    <div class="row">
+
+<div class="row">
         <div class="col-xl-12">
             <div class="card bg-progradient manage-project">
                 <div class="card-body">
@@ -197,6 +199,7 @@
             </div>
         </div>
     </div>
-    <div id="dash-content">
-    </div>
+</div>
+
+<div id="dash-content">
 </div>

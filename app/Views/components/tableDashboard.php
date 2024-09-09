@@ -1,20 +1,16 @@
 <?= $title_web ?>
-<div class="card w-100" style="opacity: 0.9; width: 100%; display: block; overflow-x: auto;">
+<div class="card w-100" style="opacity: 0.9;">
     <div class="card-header">
         <h4 class="card-title">Data <?= $title ?></h4>
-        <div class="d-flex justify-content-end">
-            <button class="btn btn-primary btn-sm mb-3" hx-get="/<?= $controller ?>/add" hx-target="#konten" hx-replace-url="/<?= $controller ?>/add">Tambah Data</button> &nbsp;
-            <button class="btn btn-primary btn-sm mb-3" hx-get="/<?= $controller ?>/upload" hx-target="#konten" hx-replace-url="/<?= $controller ?>/upload">Upload Data</button>
-        </div>
     </div>
     <div class="card-body w-100">
         <div class="table-responsive">
-            <div id="example-2_wrapper">
+            <div id="example-2_wrapper" class="dataTables_wrapper">
                 <table id="example-2" class="display dataTable" style="min-width: 100%" aria-describedby="example-2_info">
-                    <thead>
+                <thead>
                         <tr role="row">
                             <?php foreach ($thead as $t) : ?>
-                                <th><?= $t ?></th>
+                                <th style="min-width: 200px; padding:0;;"><?= $t ?></th>
                             <?php endforeach; ?>
                         </tr>
                     </thead>

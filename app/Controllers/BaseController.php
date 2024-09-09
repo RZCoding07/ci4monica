@@ -60,18 +60,33 @@ abstract class BaseController extends Controller
         // E.g.: $this->session = \Config\Services::session();
     }
 
-    protected function getTable(array $config = []): string
+    protected function getTable(array $config = [], $length = 0): string
     {
+        $csrfHash = csrf_hash();
+        $csrfToken = csrf_token();
         $defaultConfig = [
             'processing' => true,
             'serverSide' => true,
+            "scrollY" => '50vh',
             'responsive' => false,
+            "scrollX" => true,
+            "scrollCollapse" => false,
+            "scroller" => true,
+            'width' => '100%',
             'async' => true,
-            'ajax' => $config['url'],
+            'ajax' => [
+                'url' => $config['url'] ?? '',
+                'type' => 'POST',
+                'dataType' => 'json',
+                'data' => [
+                   '["'. $csrfToken .'"]' => $csrfHash,
+                ],
+                'async' => true
+            ],
             'dom' => $config['dom'] ?? 'Bfrtip',
             'buttons' => $this->getDataTableButtons(),
             'searching' => $config['searching'] ?? true,
-            'pageLength' => $config['pageLength'] ?? 15,
+            'pageLength' => $config['pageLength'] ?? 1000,
             'select' => $config['select'] ?? false,
             'lengthChange' => $config['lengthChange'] ?? false,
             'language' => $config['language'] ?? [

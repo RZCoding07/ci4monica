@@ -32,7 +32,7 @@ var themeOptionArr = {
 
 	var icThemeSet0 = { /* Default Theme */
 		typography: "poppins",
-		version: "light",
+		version: "dark",
 		layout: "horizontal",
 		primary: "color_1",
 		headerBg: "color_1",
@@ -47,7 +47,7 @@ var themeOptionArr = {
 
 	var icThemeSet1 = {
 		typography: "poppins",
-		version: "light",
+		version: "dark",
 		layout: "horizontal",
 		primary: "color_1",
 		headerBg: "color_1",
@@ -62,7 +62,7 @@ var themeOptionArr = {
 
 	var icThemeSet2 = {
 		typography: "poppins",
-		version: "light",
+		version: "dark",
 		layout: "horizontal",
 		primary: "color_1",
 		headerBg: "color_1",
@@ -78,7 +78,7 @@ var themeOptionArr = {
 
 	var icThemeSet3 = {
 		typography: "poppins",
-		version: "light",
+		version: "dark",
 		layout: "horizontal",
 		primary: "color_10",
 		headerBg: "color_10",
@@ -93,7 +93,7 @@ var themeOptionArr = {
 
 	var icThemeSet4 = {
 		typography: "poppins",
-		version: "light",
+		version: "dark",
 		layout: "horizontal",
 		primary: "color_15",
 		headerBg: "color_1",
@@ -108,7 +108,7 @@ var themeOptionArr = {
 
 	var icThemeSet5 = {
 		typography: "poppins",
-		version: "light",
+		version: "dark",
 		layout: "horizontal",
 		primary: "color_13",
 		headerBg: "color_1",
@@ -122,7 +122,7 @@ var themeOptionArr = {
 	};
 	var icThemeSet6 = {
 		typography: "poppins",
-		version: "light",
+		version: "dark",
 		layout: "horizontal",
 		primary: "color_1",
 		headerBg: "color_12",

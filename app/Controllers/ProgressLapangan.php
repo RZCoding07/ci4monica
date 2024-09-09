@@ -25,8 +25,15 @@ class ProgressLapangan extends BaseController
 
     public function tableProgressLapangan()
     {
-        $builder = db_connect()->table('progress_lapangan')->select('id, kode, unit, parent, nama_investasi, progress_lapangan, input_photo');
-        return DataTable::of($builder)->hide('id')->addNumbering()->toJson();
+        $builder = db_connect()->table('progress_lapangan')->select('id, kode, unit, parent, nama_investasi, progress_lapangan');
+        return DataTable::of($builder)
+        ->hide('id')
+        ->hide('progress_lapangan')
+        ->hide('input_photo')
+        ->add('progress_lapangan', function ($row) {
+            return round($row->progress_lapangan * 100, 2) . '%';
+        })
+        ->addNumbering()->toJson();
     }
 
     public function add()
@@ -64,23 +71,31 @@ class ProgressLapangan extends BaseController
         }
 
         $mappedData = $request->mappedData;
-        $progressLapanganModel = new ProgressLapanganModel();
+        $model = new ProgressLapanganModel();
+        $dataToInsert = [];
+    // protected $allowedFields = ['kode', 'unit', 'parent', 'nama_investasi', 'progress_lapangan', 'input_photo'];
 
         foreach ($mappedData as $data) {
-            $progressLapanganModel->insert([
+            $dataToInsert[] = [
                 'kode' => $data[0],
                 'unit' => $data[1],
                 'parent' => $data[2],
                 'nama_investasi' => $data[3],
-                'progress_lapangan' => $data[4],
-                'input_photo' => $data[5] ?? 'default.jpg'
-            ]);
+                'progress_lapangan' => $data[4]
+            ];
         }
 
-        return $this->getResponse(
-            ['message' => 'Chunk uploaded successfully'],
-            ResponseInterface::HTTP_OK
-        );
+        if ($model->insertBatch($dataToInsert)) {
+            return $this->getResponse(
+                ['message' => 'Chunk uploaded successfully'],
+                ResponseInterface::HTTP_OK
+            );
+        } else {
+            return $this->getResponse(
+                ['message' => 'Failed to upload chunk'],
+                ResponseInterface::HTTP_INTERNAL_SERVER_ERROR
+            );
+        }
     }
 
     private function getResponse($data, $statusCode)

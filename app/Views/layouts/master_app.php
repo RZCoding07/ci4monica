@@ -226,10 +226,10 @@
 
 							<li class="nav-item dropdown header-profile">
 								<a class="nav-link" href="javascript:void(0);" role="button" data-bs-toggle="dropdown">
-									<img src="images/user.jpg" width="20" alt="">
+									<img src="images/avatar.jpeg" width="20" alt="">
 									<div class="header-info ms-3">
-										<span class="fs-18 font-w500 mb-0">Franklin Jr.</span>
-										<small class="fs-12 font-w400">demo@mail.com</small>
+										<span class="fs-18 font-w500 mb-0"><?= session()->get('nama') ?></span>
+										<small class="fs-12 font-w400"><?= session()->get('role') ?></small>
 									</div>
 								</a>
 								<div class="dropdown-menu dropdown-menu-end">
