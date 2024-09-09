@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "codeigniter4/framework",
-            "version": "v4.5.4",
+            "version": "v4.5.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/codeigniter4/framework.git",
-                "reference": "336e0781a0e5f6e0a72a5ebc1c76d99f1a8bd408"
+                "reference": "2849e7ff36b4c4aa1376d990a9a1e3f0c393b8d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/codeigniter4/framework/zipball/336e0781a0e5f6e0a72a5ebc1c76d99f1a8bd408",
-                "reference": "336e0781a0e5f6e0a72a5ebc1c76d99f1a8bd408",
+                "url": "https://api.github.com/repos/codeigniter4/framework/zipball/2849e7ff36b4c4aa1376d990a9a1e3f0c393b8d0",
+                "reference": "2849e7ff36b4c4aa1376d990a9a1e3f0c393b8d0",
                 "shasum": ""
             },
             "require": {
@@ -34,7 +34,7 @@
                 "kint-php/kint": "^5.0.4",
                 "mikey179/vfsstream": "^1.6",
                 "nexusphp/cs-config": "^3.6",
-                "phpunit/phpunit": "^10.5.16",
+                "phpunit/phpunit": "^10.5.16 || ^11.2",
                 "predis/predis": "^1.1 || ^2.0"
             },
             "suggest": {
@@ -78,7 +78,7 @@
                 "slack": "https://codeigniterchat.slack.com",
                 "source": "https://github.com/codeigniter4/CodeIgniter4"
             },
-            "time": "2024-07-27T08:31:38+00:00"
+            "time": "2024-09-07T08:49:38+00:00"
         },
         {
             "name": "components/jquery",
@@ -131,16 +131,16 @@
         },
         {
             "name": "datatables.net/datatables.net",
-            "version": "2.1.5",
+            "version": "2.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/DataTables/Dist-DataTables.git",
-                "reference": "82b7af467944e02e7b7d0e839dcd3ca1e6028455"
+                "reference": "24e77e70770c02042010f4f35aad7e68f046c169"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DataTables/Dist-DataTables/zipball/82b7af467944e02e7b7d0e839dcd3ca1e6028455",
-                "reference": "82b7af467944e02e7b7d0e839dcd3ca1e6028455",
+                "url": "https://api.github.com/repos/DataTables/Dist-DataTables/zipball/24e77e70770c02042010f4f35aad7e68f046c169",
+                "reference": "24e77e70770c02042010f4f35aad7e68f046c169",
                 "shasum": ""
             },
             "require": {
@@ -168,7 +168,7 @@
                 "forum": "https://datatables.net/forums",
                 "source": "https://github.com/DataTables/Dist-DataTables"
             },
-            "time": "2024-08-30T13:30:23+00:00"
+            "time": "2024-09-06T14:35:23+00:00"
         },
         {
             "name": "datatables.net/datatables.net-buttons",
@@ -219,16 +219,16 @@
         },
         {
             "name": "datatables.net/datatables.net-dt",
-            "version": "2.1.5",
+            "version": "2.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/DataTables/Dist-DataTables-DataTables.git",
-                "reference": "4457b52c746a38c1c6efab506be503ca30ef9ba1"
+                "reference": "8526883d9402b6ff77bb6da4d6f6053ffce19dbd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DataTables/Dist-DataTables-DataTables/zipball/4457b52c746a38c1c6efab506be503ca30ef9ba1",
-                "reference": "4457b52c746a38c1c6efab506be503ca30ef9ba1",
+                "url": "https://api.github.com/repos/DataTables/Dist-DataTables-DataTables/zipball/8526883d9402b6ff77bb6da4d6f6053ffce19dbd",
+                "reference": "8526883d9402b6ff77bb6da4d6f6053ffce19dbd",
                 "shasum": ""
             },
             "require": {
@@ -256,7 +256,7 @@
                 "forum": "https://datatables.net/forums",
                 "source": "https://github.com/DataTables/Dist-DataTables-DataTables"
             },
-            "time": "2024-08-30T13:30:56+00:00"
+            "time": "2024-09-06T14:35:55+00:00"
         },
         {
             "name": "datatables/datatables",
@@ -1123,23 +1123,24 @@
         },
         {
             "name": "mikey179/vfsstream",
-            "version": "v1.6.11",
+            "version": "v1.6.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bovigo/vfsStream.git",
-                "reference": "17d16a85e6c26ce1f3e2fa9ceeacdc2855db1e9f"
+                "reference": "fe695ec993e0a55c3abdda10a9364eb31c6f1bf0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bovigo/vfsStream/zipball/17d16a85e6c26ce1f3e2fa9ceeacdc2855db1e9f",
-                "reference": "17d16a85e6c26ce1f3e2fa9ceeacdc2855db1e9f",
+                "url": "https://api.github.com/repos/bovigo/vfsStream/zipball/fe695ec993e0a55c3abdda10a9364eb31c6f1bf0",
+                "reference": "fe695ec993e0a55c3abdda10a9364eb31c6f1bf0",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
+                "php": ">=7.1.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.5|^5.0"
+                "phpunit/phpunit": "^7.5||^8.5||^9.6",
+                "yoast/phpunit-polyfills": "^2.0"
             },
             "type": "library",
             "extra": {
@@ -1170,7 +1171,7 @@
                 "source": "https://github.com/bovigo/vfsStream/tree/master",
                 "wiki": "https://github.com/bovigo/vfsStream/wiki"
             },
-            "time": "2022-02-23T02:02:42+00:00"
+            "time": "2024-08-29T18:43:31+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -1731,16 +1732,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "10.5.30",
+            "version": "10.5.33",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "b15524febac0153876b4ba9aab3326c2ee94c897"
+                "reference": "4def7a9cda75af9c2bc179ed53a8e41313e7f7cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/b15524febac0153876b4ba9aab3326c2ee94c897",
-                "reference": "b15524febac0153876b4ba9aab3326c2ee94c897",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/4def7a9cda75af9c2bc179ed53a8e41313e7f7cf",
+                "reference": "4def7a9cda75af9c2bc179ed53a8e41313e7f7cf",
                 "shasum": ""
             },
             "require": {
@@ -1754,7 +1755,7 @@
                 "phar-io/manifest": "^2.0.4",
                 "phar-io/version": "^3.2.1",
                 "php": ">=8.1",
-                "phpunit/php-code-coverage": "^10.1.15",
+                "phpunit/php-code-coverage": "^10.1.16",
                 "phpunit/php-file-iterator": "^4.1.0",
                 "phpunit/php-invoker": "^4.0.0",
                 "phpunit/php-text-template": "^3.0.1",
@@ -1812,7 +1813,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.5.30"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.5.33"
             },
             "funding": [
                 {
@@ -1828,7 +1829,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-08-13T06:09:37+00:00"
+            "time": "2024-09-09T06:06:56+00:00"
         },
         {
             "name": "psr/container",

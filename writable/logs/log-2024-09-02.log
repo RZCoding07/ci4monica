@@ -1,0 +1,119 @@
+CRITICAL - 2024-09-02 08:57:23 --> TypeError: Cannot access offset of type string on string
+[Method: POST, Route: stokbibit/dashboard_data]
+in APPPATH\Controllers\StokBibit.php on line 72.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StokBibit->dashboard_data()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StokBibit))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\Dev\\Web\\laragon\\ci4monica\\public\\index.php')
+CRITICAL - 2024-09-02 08:57:44 --> TypeError: Cannot access offset of type string on string
+[Method: POST, Route: stokbibit/dashboard_data]
+in APPPATH\Controllers\StokBibit.php on line 72.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StokBibit->dashboard_data()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StokBibit))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\Dev\\Web\\laragon\\ci4monica\\public\\index.php')
+CRITICAL - 2024-09-02 08:58:18 --> TypeError: Cannot access offset of type string on string
+[Method: POST, Route: stokbibit/dashboard_data]
+in APPPATH\Controllers\StokBibit.php on line 72.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StokBibit->dashboard_data()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StokBibit))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\Dev\\Web\\laragon\\ci4monica\\public\\index.php')
+CRITICAL - 2024-09-02 08:58:36 --> TypeError: Unsupported operand types: int + array
+[Method: POST, Route: stokbibit/dashboard_data]
+in APPPATH\Controllers\StokBibit.php on line 79.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StokBibit->dashboard_data()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StokBibit))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\Dev\\Web\\laragon\\ci4monica\\public\\index.php')
+CRITICAL - 2024-09-02 08:59:01 --> ErrorException: array_sum(): Addition is not supported on type string
+[Method: POST, Route: stokbibit/dashboard_data]
+in APPPATH\Controllers\StokBibit.php on line 79.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_sum(): Addition is not supported on type string', 'D:\\Dev\\Web\\laragon\\ci4monica\\app\\Controllers\\StokBibit.php', 79)
+ 2 APPPATH\Controllers\StokBibit.php(79): array_sum([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StokBibit->dashboard_data()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StokBibit))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('D:\\Dev\\Web\\laragon\\ci4monica\\public\\index.php')
+CRITICAL - 2024-09-02 08:59:11 --> ErrorException: array_sum(): Addition is not supported on type string
+[Method: POST, Route: stokbibit/dashboard_data]
+in APPPATH\Controllers\StokBibit.php on line 79.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_sum(): Addition is not supported on type string', 'D:\\Dev\\Web\\laragon\\ci4monica\\app\\Controllers\\StokBibit.php', 79)
+ 2 APPPATH\Controllers\StokBibit.php(79): array_sum([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StokBibit->dashboard_data()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StokBibit))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('D:\\Dev\\Web\\laragon\\ci4monica\\public\\index.php')
+CRITICAL - 2024-09-02 09:00:14 --> TypeError: Unsupported operand types: int + array
+[Method: POST, Route: stokbibit/dashboard_data]
+in APPPATH\Controllers\StokBibit.php on line 79.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StokBibit->dashboard_data()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StokBibit))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\Dev\\Web\\laragon\\ci4monica\\public\\index.php')
+CRITICAL - 2024-09-02 09:00:35 --> ErrorException: array_sum(): Addition is not supported on type string
+[Method: POST, Route: stokbibit/dashboard_data]
+in APPPATH\Controllers\StokBibit.php on line 79.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_sum(): Addition is not supported on type string', 'D:\\Dev\\Web\\laragon\\ci4monica\\app\\Controllers\\StokBibit.php', 79)
+ 2 APPPATH\Controllers\StokBibit.php(79): array_sum([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StokBibit->dashboard_data()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StokBibit))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('D:\\Dev\\Web\\laragon\\ci4monica\\public\\index.php')
+CRITICAL - 2024-09-02 09:00:51 --> Error: Cannot use a scalar value as an array
+[Method: POST, Route: stokbibit/dashboard_data]
+in APPPATH\Controllers\StokBibit.php on line 79.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StokBibit->dashboard_data()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StokBibit))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\Dev\\Web\\laragon\\ci4monica\\public\\index.php')
+INFO - 2024-09-02 09:15:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 09:15:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-02 09:15:49 --> ErrorException: Undefined variable $tbl_keys
+[Method: POST, Route: stokbibit/dashboard_data]
+in APPPATH\Views\dashboard\dashboard_bibit.php on line 72.
+ 1 APPPATH\Views\dashboard\dashboard_bibit.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tbl_keys', 'D:\\Dev\\Web\\laragon\\ci4monica\\app\\Views\\dashboard\\dashboard_bibit.php', 72)
+ 2 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(93): include('D:\\Dev\\Web\\laragon\\ci4monica\\app\\Views\\dashboard\\dashboard_bibit.php')
+ 3 VENDORPATH\michalsn\codeigniter-htmx\src\View\View.php(96): Michalsn\CodeIgniterHtmx\View\View->Michalsn\CodeIgniterHtmx\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): Michalsn\CodeIgniterHtmx\View\View->render('dashboard/dashboard_bibit', [], true)
+ 5 APPPATH\Controllers\BaseController.php(111): view('dashboard/dashboard_bibit', [...])
+ 6 APPPATH\Controllers\StokBibit.php(94): App\Controllers\BaseController->getView([...], Object(Michalsn\CodeIgniterHtmx\HTTP\IncomingRequest), 'dashboard/dashboard_bibit')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\StokBibit->dashboard_data()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StokBibit))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\Dev\\Web\\laragon\\ci4monica\\public\\index.php')
+INFO - 2024-09-02 09:56:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 10:21:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 10:22:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 12:36:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-09-02 13:21:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
