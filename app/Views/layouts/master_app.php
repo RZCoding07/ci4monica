@@ -134,6 +134,18 @@
 			background-size: cover;
 			background-position: 50% 50%;
 		}
+
+		.ic-theme-mode i {
+			display: none;
+		}
+
+		body[data-theme-version="dark"] #ic-dark {
+			display: block !important;
+		}
+
+		body[data-theme-version="light"] #ic-light {
+			display: block !important;
+		}
 	</style>
 </head>
 
@@ -215,10 +227,10 @@
 									<span class="input-group-text"><a href="javascript:void(0)"><i class="flaticon-search-interface-symbol"></i></a></span>
 								</div>
 							</li>
-							<li class="nav-item dropdown notification_dropdown">
+							<li onclick="toggleDarkMode()" class="nav-item dropdown notification_dropdown">
 								<a class="nav-link bell ic-theme-mode p-0" href="javascript:void(0);">
-									<i id="icon-light" class="fas fa-sun"></i>
-									<i id="icon-dark" class="fas fa-moon"></i>
+									<i id="ic-light" class="fas fa-sun"></i>
+									<i id="ic-dark" class="fas fa-moon"></i>
 								</a>
 							</li>
 
@@ -288,35 +300,45 @@
 		<script src="<?= base_url() ?>js/styleSwitcher.js"></script>
 
 		<script>
-			$(document).ready(function() {
-				//change dark mode
-				if (getCookie('version') == 'dark') {
-					var logo2 = 'images/logo-full-white.png';
-					jQuery('.nav-header .logo-compact, .nav-header .brand-title').attr("src", logo2);
-				}
-				if (getCookie('version') == 'light') {
-					var logo2 = 'images/logo-full.png';
-					jQuery('.nav-header .logo-compact, .nav-header .brand-title').attr("src", logo2);
-				}
-				$('#icon-light').click(function() {
-					$('#icon-light').hide();
-					$('#icon-dark').show();
-					$('body').addClass('dark');
-					$('body').removeClass('light');
-					setCookie('version', 'dark', 30);
-					var logo2 = 'images/logo-full.png';
-					jQuery('.nav-header .logo-compact, .nav-header .brand-title').attr("src", logo2);
-				});
+			var d = false
 
-				$('#icon-dark').click(function() {
-					$('#icon-dark').hide();
-					$('#icon-light').show();
-					$('body').addClass('light');
-					$('body').removeClass('dark');
-					setCookie('version', 'light', 30);
-					var logo2 = 'images/logo-full-white.png';
-					jQuery('.nav-header .logo-compact, .nav-header .brand-title').attr("src", logo2);
-				});
+			function toggleDarkMode() {
+				if (d) return
+				d = true
+				let conf = localStorage['userConfig_<?= session()->get('username') ?>']
+				if (conf && Object.keys(conf) && Object.keys(conf).length > 0) {
+					conf = JSON.parse(conf);
+				} else {
+					conf = {
+						'theme': 'light',
+						'sidebar': '',
+					}
+				}
+				if ($('body').attr('data-theme-version') == 'light') {
+					$('body').attr('data-theme-version', 'dark');
+					$('body').removeClass('dark').addClass('light');
+					conf.theme = 'dark';
+				} else {
+					$('body').attr('data-theme-version', 'light');
+					$('body').removeClass('light').addClass('dark');
+					conf.theme = 'light';
+				}
+				localStorage.setItem('userConfig_<?= session()->get('username') ?>', JSON.stringify(conf))
+			};
+			$(document).ready(function() {
+				let conf = localStorage['userConfig_<?= session()->get('username') ?>']
+				if (conf && Object.keys(conf) && Object.keys(conf).length > 0) {
+					conf = JSON.parse(conf);
+					if (conf.theme == 'dark') {
+						toggleDarkMode()
+					}
+				} else {
+					conf = {
+						'theme': 'light',
+						'sidebar': '',
+					}
+				}
+				localStorage.setItem('userConfig_<?= session()->get('username') ?>', JSON.stringify(conf))
 			});
 
 			function offCanvasOpen() {

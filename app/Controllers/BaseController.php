@@ -67,7 +67,7 @@ abstract class BaseController extends Controller
         $defaultConfig = [
             'processing' => true,
             'serverSide' => true,
-            "scrollY" => '50vh',
+            "scrollY" => '50dvh',
             'responsive' => false,
             "scrollX" => true,
             "scrollCollapse" => false,
@@ -83,7 +83,7 @@ abstract class BaseController extends Controller
                 ],
                 'async' => true
             ],
-            'dom' => $config['dom'] ?? 'Bfrtip',
+            'dom' => $config['dom'] ?? 'Bfrti',
             'buttons' => $this->getDataTableButtons(),
             'searching' => $config['searching'] ?? true,
             'pageLength' => $config['pageLength'] ?? 1000,
@@ -105,17 +105,17 @@ abstract class BaseController extends Controller
         return [
             [
                 'extend' => 'excel',
-                'text' => '<i class="fa-solid fa-file-excel"></i> Export Report',
+                'text' => '<i class="fa-solid fa-file-excel"></i> Excel',
                 'className' => 'btn btn-sm bg-primary text-white border-0 shadow-none rounded'
             ],
             [
                 'extend' => 'pdf',
-                'text' => '<i class="fa-solid fa-file-pdf"></i> Export PDF',
+                'text' => '<i class="fa-solid fa-file-pdf"></i> PDF',
                 'className' => 'btn btn-sm bg-primary text-white border-0 shadow-none rounded'
             ],
             [
-                'extend' => 'csv',
-                'text' => '<i class="fa-solid fa-file-csv"></i> CSV Report',
+                'extend' => 'copy',
+                'text' => '<i class="fa-solid fa-copy"></i> Salin',
                 'className' => 'btn btn-sm bg-primary text-white border-0 shadow-none rounded'
             ],
         ];

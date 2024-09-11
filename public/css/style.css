@@ -13925,15 +13925,7 @@ textarea.form-control {
   }
 }
 
-.ic-theme-mode #icon-light {
-  display: none;
-}
-.ic-theme-mode.active #icon-light {
-  display: inline-block;
-}
-.ic-theme-mode.active #icon-dark {
-  display: none;
-}
+
 
 .notification_dropdown .dropdown-menu-end {
   min-width: 19.375rem;
